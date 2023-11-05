@@ -1,0 +1,49 @@
+.contenedor .datos{
+    border-top: 6px solid #376c8f;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    
+}
+.contenedor .datos .checkbox{
+    font-size: 20px;
+    font-family: 'Open Sans',sans-serif;
+    color: #332f2c;
+}
+
+.contenedor .formulario .barraBotones .btnGuardar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .formulario .barraBotones .btnGuardar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+
+.contenedor .barraBotones .btnCancelar{
+    background: #ca3838;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .btnCancelar:hover{
+    background: #dd2525;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+
+.contenedor  .formulario .Vmodal{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}

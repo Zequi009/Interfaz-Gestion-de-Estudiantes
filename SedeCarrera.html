@@ -1,0 +1,373 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/SedeCarrera.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Nueva Carrera</title>
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACION -->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Nueva Carrera
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="row contenedor justify-content-center ">
+            <div class=" col">
+                <form class=" form- floating formulario">
+                    <!--Cuerpo de la Página-->
+                    <div class="row datos my-2 py-2 d-flex justify-content-center">
+                        <h4 class="text-center text-muted text-decoration-underline">Seleccionar la Sede y la Carrera
+                        </h4>
+                        <!--Sede-->
+                        <div class="col-6">
+                            <!-- Seleccionar sede // Ver mas-->
+                            <div class="input-group">
+                                <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
+                                data-bs-target="#modalMostrar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
+                                        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
+                                      </svg>
+                                    Ver
+                                </a>
+                                <select name="" id="selectSede" class="form-select">
+                                    <option value="1">Elegir la Sede</option>
+                                </select>
+                            </div>
+                            <!--BOTON NUEVA SEDE-->
+                            <div class="col-auto d-flex justify-content-center">
+                                <a href="../Nueva carpeta/Nueva_Sede.html" class="text-decoration-none text-center my-1 h6 mx-1 w-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+                                    agregar una nueva Sede
+                                </a>
+                            </div>
+                        </div>
+                        <!--CARRERA-->
+                        <div class="col-6 d-flex flex-column">
+                            <!-- SELECCIONAR CARRERA // VER MAS-->
+                            <div class="input-group">
+
+                                <select name="" id="selectSede" class="form-select">
+                                    <option value="1">Elegir la Carrera</option>
+                                </select>
+                                
+                                <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal" data-bs-target="#modalCarrera">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
+                                        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
+                                      </svg>
+                                    Ver
+                                </a>
+                            </div>
+                            <!--BOTON NUEVA CARRERA-->
+                            <div class="col-auto d-flex justify-content-center">
+                                <a href="../Nueva carpeta/Nueva Carrera.html" class="text-decoration-none text-center my-1 h6 mx-1 w-50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+                                    agregar una nueva Carrera
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Turno y Codigo de Carrera-->
+                    <div class="row datos my-2 py-2d-flex justify-content-center">
+                        <!--Turno-->
+                        <h4 class="text-center text-muted text-decoration-underline">Turno y Código de Carrera</h4>
+                        <div class="col-4 my-2">
+                            <select name="" id="#" class="form-select">
+                                <option value="1">Seleccionar Turno</option>
+                            </select>
+                        </div>
+                        <!--Codigo de Carrera-->
+                        <div class="col-6 my-2 d-flex ">
+                            <input type="text" id="InputCodigo" class="form-control" placeholder="Ej: cohorte 2016">
+                            <label for="InputCodigo" class="form-label text-muted mx-1">Ingrese el Código de la
+                                Carrera</label>
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <!--Modal Guardar-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
+                                    todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Modal Cancelar-->
+                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
+                                    principal, ¿Seguro que desea Cancelar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
+                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
+                                        Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Modal Editar Sede-->
+                    <div class="modal fade" id="modalMostrar" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!--Datos Generales-->
+                                    <h6 class="text-center text-decoration-underline">Datos Generales</h6>
+                                    <div class="row-auto border rounded py-1 px-1">
+                                        <div class="col">
+                                            <label for="" class="form-label">Descripcion de la Sede</label>
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="" class="form-label">Telefono</label>
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-auto">
+                                            <label for="" class="form-label">Correo Electrónico</label>
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <!--Direccion-->
+                                    <h6 class="text-center text-decoration-underline">Dirección</h6>
+                                    <div class="row-auto border rounded mt-1 py-1 px-1 ">
+                                        <div class="col">
+                                            <label for="" class="form-label">Localidad</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-9">
+                                            <label for="" class="form-label">Barrio</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-9">
+                                            <label for="" class="form-label">Calle</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-auto d-flex justify-content-between mt-3">
+                                            <label for="" class="form-label px-3">Número</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label px-3">Piso</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label px-3">Dpto</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <!--Dia y Hora-->
+                                    <h6 class="text-center text-decoration-underline">Día y Horario de Atención</h6>
+                                    <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-between">
+                                        <div class="col-3">
+                                            <label for="" class="form-label">De</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label">A</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                        <div class="col-3 ">
+                                            <label for="" class="form-label">Desde</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label">Hasta</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="text" class="btn btn-success">Editar
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                    </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Editar Carrera-->
+                    <div class="modal fade" id="modalCarrera" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!--Datos Generales-->
+                                    <h6 class="text-center text-decoration-underline">Datos Generales</h6>
+                                    <div class="row-auto border rounded py-1 px-1">
+                                        <div class="col">
+                                            <label for="" class="form-label">Descripcion de la Carrera</label>
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                    <!--Plan de la Carrera-->
+                                    <h6 class="text-center text-decoration-underline">Plan de la Carrera</h6>
+                                    <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-center">
+                                        <div class="col-9">
+                                            <label for="" class="form-label">Plan de La carrera</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label">Fecha de inicio</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label">Fecha de Cierre</label>
+                                            <input type="text" name="" id="" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="text" class="btn btn-success">Editar
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                    </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+    </main>
+    <!--Footer-->
+    <div class="container">
+        <footer class="footer mt-5">
+            <div class="row datos d-flex justify-content-center align-items-start pt-1">
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Menu_Principal.html" class="tex-muted text-decoration-none">Inicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Inscripciones.html" class="tex-muted text-decoration-none">Inscripciones</a></li>
+                      <li><a href="../Nueva carpeta/Libro de Temas(Preceptor).html" class="tex-muted text-decoration-none">Libro de Temas</a></li>
+                      <li><a href="../Nueva carpeta/Listado-Cooperadora(sombra, barra de Búsqueda, editar-eliminar).html" class="tex-muted text-decoration-none">Ver Cooperadora</a></li>
+                      <li><a href="../Nueva carpeta/Listado_de_Asitencias(Preceptor).html" class="tex-muted text-decoration-none">Registro de Asistencias</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Nueva_Carrera(Sombra).html" class="tex-muted text-decoration-none">Nueva Sede</a></li>
+                      <li><a href="../Nueva carpeta/Nueva Carrera(sombra).html" class="tex-muted text-decoration-none">Nueva Carrera</a></li>
+                      <li><a href="../Nueva carpeta/Nueva_Materia(Inputs, sombra).html" class="tex-muted text-decoration-none">Nueva Materia</a></li>
+                      <li><a href="../Nueva carpeta/Nuevo Alumno(Sombra).html" class="tex-muted text-decoration-none">Nuevo Alumno</a></li>
+                      <li><a href="../Nueva carpeta/Nuevo_Personal.html" class="tex-muted text-decoration-none">Nuevo Personal</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Listado_Alumnos(Agregar sombra y cambiar barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de Alumnos</a></li>
+                      <li><a href="../Nueva carpeta/Listado_Materias(Sombra y Barra de Búsqueda).html" class="tex-muted text-decoration-none">Listado de Materias</a></li>
+                      <li><a href="../Nueva carpeta/Listado_Carreras(Cambiar Barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de carreras</a></li>
+                      <li><a href="../Nueva carpeta/Listado_de_Notas(preceptor).html" class="tex-muted text-decoration-none">Listado de Notas</a></li>
+                    </ul>
+                </div>
+                
+            <span class="text-center text-muted">Desarrollado por JokerWare S.A. Todos los derechos Reservados</span>
+            </div>
+        </footer>
+    </div>
+    <!--<script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+</body>
+
+</html>

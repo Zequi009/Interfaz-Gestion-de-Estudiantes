@@ -1,0 +1,113 @@
+.contenedor .datos{
+    border-top: 6px solid #376c8f;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
+<<<<<<< HEAD
+=======
+/*Asistencia-botones*/
+.contenedor .datos .botonesRadio{
+    background: #47aa77;
+    color: #f2f2f2;
+    border: 1px solid #332f2c;
+}
+
+ #btnBuscar{
+    background: #3890ca;
+    color: #F2F2F2;
+    height: 50PX;
+    width:150PX;
+    font-size: 13px;
+    font-family: 'Open-Sans',sans-serif;
+}
+
+#btnBuscar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 12px #332f2c;
+    transform: translate(-1px,-1px);
+    border-radius: 1opx;
+}
+
+
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+/*Fijar Columna NOMBRE*/
+.contenedor .datos .ColNombre, .EncNombre {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #f2f2f2;
+
+    
+}
+.contenedor .datos .EncNombre:nth-child(1){
+    background:  #f2f2f2;
+}
+
+/*Celdas*/
+.contenedor .datos table  tbody select{
+    width: 180px;
+    padding-left:10px;
+    
+}
+.contenedor .datos .btnConfirmar{
+    height: 29px;
+    width: 30px;
+
+}
+/*Botones*/
+.contenedor .formulario .barraBotones .BtnGuardar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .BtnGuardar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+.contenedor .barraBotones .BtnCancelar{
+    background: #ca3838;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .BtnCancelar:hover{
+    background: #dd2525;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+
+.contenedor  .formulario .Vmodal{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
+}
+#btnBuscar{
+    background: #3890ca;
+    color: #F2F2F2;
+    height: 50PX;
+    width:150PX;
+    font-size: 13px;
+    font-family: 'Open-Sans',sans-serif;
+}
+
+#btnBuscar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 12px #332f2c;
+    transform: translate(-1px,-1px);
+    border-radius: 1opx;
+}
+=======
+}
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/MenuPrincipal.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+    <title>Menu Principal</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+      <header class="" id="navegacion"></header>
+      <div class="row mt-2">
+          <div class="col-auto">
+              <nav class="migas mt-3" aria-label="camino">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item active" aria-current="page">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-circle-fill" viewBox="0 0 16 16">
+                              <circle cx="8" cy="8" r="8" />
+                          </svg>
+                          Inicio
+                      </li>
+                  </ol>
+              </nav>
+          </div>
+      </div>
+  </div>
+    <!--Cuerpo-->
+    <main class="container mb-3">
+        <!--Bienvenida //Slider-->
+        <div id="carousel-container"></div>
+        <!--Institucionales-->
+        <div class="row contenedor d-flex justify-content-center">
+            <div class="col-auto datos d-flex justify-content-start flex-column shadow-lg mx-2">
+                <h2 class="text-center text-muted text-underline">Institucionales</h2>
+                <!--Cursantes-->
+                <a class="btn btn1" type="button" href="../Nueva carpeta/cursantes(Profesor).html">Alumnos Cursantes</a>
+                <!--Libro de Temas-->
+                <a class="btn btn1 my-3" type="button" href="../Nueva carpeta/LibrodeTemas.html">Libro de Temas</a>
+                <!--Registro de Asistencias-->
+                <a class="btn btn1 my-3" type="button" href="../Nueva carpeta/Registro_de_Asistencias.html">Registro de Asistencias</a>
+            </div>
+            <!--Nuevo-->
+            <div class="col-auto datos d-flex justify-content-start flex-column shadow-lg mx-2">
+                <h2 class="text-center text-muted text-underline my-2">Nuevo</h2>
+                <!--Examenes-->
+                <a class="btn btn1 my-3" type="button" href="../Nueva carpeta/Examenes(profesor).html">Exámenes</a>
+            </div>
+            <!--Ver Listados-->
+            <div class="col-auto datos d-flex justify-content-start flex-column shadow-lg mx-2">
+                <h2 class="text-center text-muted text-underline my-2">Ver</h2>
+                <!--Temas de Otras Carreras-->
+                <a class="btn btn1 my-3" type="button"
+                    href="../Nueva carpeta/VerTemas(Profesor).html">Temas de Otras Materias
+                </a>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <div class="container">
+      <footer class="footer mt-5 mb-3 " id="footer"></footer>
+  </div>
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion(profesor).js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer(Profesor).js"></script>
+    <script src="../Nueva carpeta/Css-Js/Carousel.js"></script>
+</body>
+</html>

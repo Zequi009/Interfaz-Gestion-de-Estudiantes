@@ -1,0 +1,90 @@
+.contenedor .datos{
+    border-top: 6px solid #376c8f;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    
+}
+
+.contenedor .formulario .datos .horario .input{
+    width: 300px;
+}
+.contenedor .formulario .datos .check label{
+    font-size: 18px;
+    
+}
+
+<<<<<<< HEAD
+=======
+.contenedor .formulario .datos .BtnAgregar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 30px;
+    width: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .formulario .datos .BtnAgregar:hover{
+    background: #44aadd;
+    box-shadow: 2px 3px 7px #332f2c;
+    transform: translate(-2px ,1px);
+    border-radius: 10px;
+}
+.contenedor .formulario .datos label{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+.contenedor .barraBotones .btnGuardar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .btnGuardar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 10px #332f2c;
+<<<<<<< HEAD
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+=======
+    transform: translate(-5px ,-6px);
+    border-radius: 10px;
+}
+
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+.contenedor .barraBotones .btnCancelar{
+    background: #ca3838;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .btnCancelar:hover{
+    background: #dd2525;
+    box-shadow: 3px 5px 10px #332f2c;
+<<<<<<< HEAD
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}
+
+
+=======
+    transform: translate(-5px ,-6px);
+    border-radius: 10px;
+}
+
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+.contenedor  .formulario .Vmodal{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}

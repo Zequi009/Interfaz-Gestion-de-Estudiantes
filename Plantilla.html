@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/plantilla.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <!--Principal-->
+    <main class="container">
+        <div class="row contenedor justify-content-center ">
+            <div class=" col">
+                <form class="formulario">
+
+
+
+                    <!--Cuerpo de la Página-->
+                    <div class="col datos">
+
+                    </div>
+
+
+
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--Modal Guardar-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
+                                    todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--Modal Cancelar-->
+                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
+                                    principal, ¿Seguro que desea Cancelar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
+                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
+                                        Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+<<<<<<< HEAD
+=======
+    <div class="container">
+        <footer class="footer mt-5">
+            <div class="row datos d-flex justify-content-center align-items-start pt-1">
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Menu_Principal.html" class="tex-muted text-decoration-none">Inicio</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Inscripciones.html" class="tex-muted text-decoration-none">Inscripciones</a></li>
+                      <li><a href="../Nueva carpeta/Libro de Temas(Preceptor).html" class="tex-muted text-decoration-none">Libro de Temas</a></li>
+                      <li><a href="../Nueva carpeta/Listado-Cooperadora(sombra, barra de Búsqueda, editar-eliminar).html" class="tex-muted text-decoration-none">Ver Cooperadora</a></li>
+                      <li><a href="../Nueva carpeta/Listado_de_Asitencias(Preceptor).html" class="tex-muted text-decoration-none">Registro de Asistencias</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Nueva_Sede(Sombra).html" class="tex-muted text-decoration-none">Nueva Sede</a></li>
+                      <li><a href="../Nueva carpeta/Nueva Carrera(sombra).html" class="tex-muted text-decoration-none">Nueva Carrera</a></li>
+                      <li><a href="../Nueva carpeta/Nueva_Materia(Inputs, sombra).html" class="tex-muted text-decoration-none">Nueva Materia</a></li>
+                      <li><a href="../Nueva carpeta/Nuevo Alumno(Sombra).html" class="tex-muted text-decoration-none">Nuevo Alumno</a></li>
+                      <li><a href="../Nueva carpeta/Nuevo_Personal.html" class="tex-muted text-decoration-none">Nuevo Personal</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <ul class="list-unstyled">
+                      <li><a href="../Nueva carpeta/Listado_Alumnos(Agregar sombra y cambiar barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de Alumnos</a></li>
+                      <li><a href="../Nueva carpeta/Listado_Materias(Sombra y Barra de Búsqueda).html" class="tex-muted text-decoration-none">Listado de Materias</a></li>
+                      <li><a href="../Nueva carpeta/Listado_Carreras(Cambiar Barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de carreras</a></li>
+                      <li><a href="../Nueva carpeta/Listado_de_Notas(preceptor).html" class="tex-muted text-decoration-none">Listado de Notas</a></li>
+                    </ul>
+                </div>
+                
+            <span class="text-center text-muted">Desarrollado por JokerWare S.A. Todos los derechos Reservados</span>
+            </div>
+        </footer>
+    </div>
+>>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+    <!--<script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+.contenedor .datos{
+    border-top: 6px solid #376c8f;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 
+    13px;
+}
+.contenedor .datos .BtnBuscar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 50px;
+    width: 150px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .datos .BtnBuscar:hover{
+    background: #44aadd;
+    box-shadow: 3px 5px 12px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
+}

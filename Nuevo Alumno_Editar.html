@@ -1,0 +1,239 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevoAlumno.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <title>Editar Alumno</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <!--Formulario-->
+        <div class="row contenedor justify-content-center">
+            <div class="col-12 ">
+                <form action="" method="get" class="formulario text-muted ">
+                    <!--datos personales-->
+                    <div class="row my-2 py-2 datos d-flex justify-content-center shadow-lg">
+                        <h4 class="text-muted text-decoration-underline text-center">Datos Personales </h4>
+                        <!--Nombre-->
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="sedeID" id="sedeID" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" sedeID completo del alumno, si no tiene dejelo en blanco">
+                                <label for="sedeID">Nombre</label>
+                            </div>
+                        </div>
+                        <!--Apellido-->
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="apellido" id="apellido" class="form-control"
+                                    placeholder="Ej: Doe" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" apellido del alumno">
+                                <label for="apellido">Apellido</label>
+                            </div>
+                        </div>
+                        <!--DNI-->
+                        <div class="col-2">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="documento" id="documento" class="form-control"
+                                    placeholder="Ej:12345678" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" documento del alumno, no debe ser separado por puntos">
+                                <label for="documento">DNI</label>
+                            </div>
+                        </div>
+                        <!--Fecha de Nacimiento-->
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                                <input type="date" name="fecha de nacimiento" id="fecha de nacimiento"
+                                    class="form-control" placeholder="Ej:10/12/52" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title=" fecha de nacimiento del alumno">
+                                <label for="fecha de nacimiento">Fecha de Nacimiento</label>
+                            </div>
+                        </div>
+                        <!--Telefono-->
+                        <div class="col-4">
+                            <div class="form-floating mb-6">
+                                <input type="text" name="telefono" id="telefono" class="form-control"
+                                    placeholder="Ej:john Doe" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" telefono del alumno">
+                                <label for="telefono">Teléfono</label>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="correo" id="correo" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" correo del alumno, si no tiene dejelo en blanco">
+                                <label for="correo">Correo Electronico</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Direccion-->
+                    <div class="row my-3 py-2 datos  justify-content-between shadow-lg">
+                        <h4 class="text-muted text-center text-decoration-underline">Dirección</h4>
+                        <div class="col-6">
+                            <!--Localidad-->
+                            <div class="form-floating mb-3">
+                                <input type="text" name="localidad" id="localidad" class="form-control"
+                                    placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" localidad del alumno, si no tiene dejarlo en blanco">
+                                <label for="localidad">Localidad</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <!--Barrio-->
+                            <div class="form-floating mb-3">
+                                <input type="text" name="Barrio" id="barrio" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" barrio del alumno, si no tiene dejarlo en blanco">
+                                <label for="barrio">Barrio</label>
+                            </div>
+                        </div>
+                        <!--Calle-->
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="calle" id="calle" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" calle del alumno, si no tiene dejarlo en blanco">
+                                <label for="calle">Calle</label>
+                            </div>
+                        </div>
+                        <!--Numero-->
+                        <div class="col-2   ">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="numero" id="numero" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" numero del alumno, si no tiene dejarlo en blanco">
+                                <label for="numero">Número</label>
+                            </div>
+                        </div>
+                        <!--piso-->
+                        <div class="col-2">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="piso" id="piso" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title=" piso del depertamento del alumno, si no tiene dejarlo en blanco">
+                                <label for="piso">Piso</label>
+                            </div>
+                        </div>
+                        <!--Dpto-->
+                        <div class="col-2">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="dpto" id="dpto" class="form-control" placeholder="Ej:john "
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="depertamento del alumno, si no tiene dejarlo en blanco">
+                                <label for="dpto">Depto.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Contacto de emergencia-->
+                    <div class="row my-2 py-2 datos justify-content-center shadow-lg">
+                        <h4 class="text-muted text-decoration-underline text-center">Contacto de Emergencia</h4>
+                        <!--Nombre-Emergencia-->
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="emergencia" id="emergencia" class="form-control"
+                                    placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Nombre Completo del contacto de emergencia del alumno, si no tiene dejelo en blanco">
+                                <label for="emergencia">Nombre</label>
+                            </div>
+                        </div>
+                        <!--Telefono-Emergencia-->
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" 
+                                       name="telefono" 
+                                       id="telefono" 
+                                       class="form-control"
+                                       placeholder="Ej:john " 
+                                       data-bs-toggle="tooltip" 
+                                       data-bs-placement="top"
+                                       title="telefono( con codigo de area) del contacto de emergencia, si no tiene dejelo en blanco"
+                                       >
+                                <label for="telefono">Telefono</label>
+                                <div id="telefono-error"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--COntraseña-->
+                    <div class="row my-3 py-2 datos justify-content-center shadow-lg">
+                        <h4 class="text-muted text-decoration-underline text-center">Contraseña</h4>
+                        <div class="col-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="contraseña" id="contraseña" class="form-control"
+                                    placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Es la contraseña que tendra el alumno para acceder a la aplicacion, por defecto es el DNI">
+                                <label for="contraseña">contraseña</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <!--Modal Guardar-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <!--boton cancelar-->
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <!--Boton guardar-->
+                                    <button type="submit" class="btn  btn-primary" onclick="validarTelefono()">Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Cancelar-->
+                    <div class="modal fade Vmodal" id="modalcancelar"  data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana princip, ¿Seguro que desea Cancelar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
+                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/Nuevo_Alumno.js"></script>
+</body>
+
+</html>

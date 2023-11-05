@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/Libro_de_temas.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <title>Registro de Examenes</title>
+</head>
+
+<body>
+    <!--Barra de Navegacion-->
+
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Examenes
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--Cuerpo de la Pagina-->
+    <main class="container">
+        <!--Tabla de Examenes-->
+        <div class="row contenedor d-flex justify-content-center">
+            <div class="col">
+                <form action="" class="formulario text-muted">|
+                    <div class="row my-2 py-2 datos d-flex flex-column justify-content-center align-items-center">
+                        <h4 class="text-center text-decoration-underline text-muted">Tabla de Exámenes</h4>
+                        <div class="col-6 mb-3">
+                            <select name="" id="" class="form-select">
+                                <option value="">Seleccionar Materia</option>
+                            </select>
+                        </div>
+                        <div class="col px-3">
+                            <div class="table-responsive tabla">
+                                <table class="table table-striped ">
+                                    <!--Encabezado-->
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope="col">Descripción</th>
+                                            <th scope="col">fecha</th>
+                                            <th scope="col">período</th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Editar</th>
+                                        </tr>
+                                    </thead>
+                                    <!--Entrada de Datos-->
+                                    <tbody class=" text-center" id="TexamenBody">
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th><a href="#" data-bs-toggle="modal" data-bs-target="#ModalEditar"> modal</a></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal para Editar-->
+                    <div class="modal fade" id="ModalEditar" tabindex="-1" aria-labelledby="modalEditarNota"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!--Encabezado Modal-->
+                                <div class="modal-header d-flex justify-content-center">
+                                    <h5 class="modal-title text-center" id="modalEditarNota">Editar Examen</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal"aria-labely="boton para cerrar el modal"></button>
+                                </div>
+                                <!--Cuerpo Modal-->
+
+                                <div class="modal-body">
+                                    <div class="row container d-flex flex-column justify-content-center">
+
+                                        <!--Muestra la Nota y Fecha ya guardada en el sistema y permite editarlas-->
+
+                                        <div class="col my-3">
+                                            <label for="Viejo_InputNota">Cambie la Descripcion</label>
+                                            <input type="text" class="form-control" Id="Viejo_InputNota">
+                                        </div>
+                                        <div class="col-6 my-3">
+                                            <label for="Viejo_InputFecha">Cambie la Fecha</label>
+                                            <input type="date" class="form-control" id="Viejo_InputFecha">
+                                        </div>
+                                        <div class="col-8 my-3">
+                                            <select name="" id="Viejo_SelectPeriodo" class="form-select">
+                                                <option value="">Seleccione un Período</option>
+                                                <option value="Primero">Primer Periodo</option>
+                                                <option value="segundo">Segundo Periodo</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-8 my-3">
+                                            <select name="" id="Viejo_SelectTipo" class="form-select">
+                                                <option value="">Seleccione un Tipo de Examen</option>
+                                                <option value="escrito">Oral</option>
+                                                <option value="escrito">Escrito</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--Pie de Página Modal-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"
+                                            data-bs-dismiss="modal">Guardar</button>
+                                        <button type="close" class="btn btn-outline-danger"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Exámenes-->
+        <div class="row contenedor justify-content-center">
+            <div class="col">
+                <form action="" class="formulario text-muted">
+                    <div class="row my-2 py-2 datos d-flex justify-content-center">
+                        <h4 class="text-center text-decoration-underline text-muted">Exámenes</h4>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-5 px-3">
+                                <select class="form-select mb-3" aria-label="form-select" name="alumnos" id="materia">
+                                    <option value="seleccion"> Seleccionar Materia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5 py-3">
+                            <label for="" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control " placeholder="Ej: conceptos de economía">
+                        </div>
+                        <div class="col-4 py-3">
+                            <label for="" class="form-label">Ingrese la Fecha del Exámen</label>
+                            <input type="date" class="form-control w-50">
+                        </div>
+                        <div class="col-4 py-3">
+                            <select name="" id="etapa" class="form-select">
+                                <option value="">Seleccionar el período</option>
+                                <option value="primera">Primera Etapa</option>
+                                <option value="segunda">Segunda Etapa</option>
+                            </select>
+                        </div>
+                        <div class="col-4 py-3">
+                            <select name="" id="tipo" class="form-select">
+                                <option value="">Seleccione el Tipo de Examen</option>
+                                <option value="oral">Oral</option>
+                                <option value="escrito">Escrito</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
+    </div>
+
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion(profesor).js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer(Profesor).js"></script>
+</body>
+
+</html>

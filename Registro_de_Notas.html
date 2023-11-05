@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Notas</title>
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/RegistroNotas.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Institucionales
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Registro de Notas
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Cuerpo de la Página-->
+    <main class="container">
+        <div class="row contenedor justify-content-center">
+            <div class="col-12 my-2  justify-content-center">
+                <!--Tabla de Datos-->
+                <div class="row datos d-flex justify-content-center">
+                        
+                    <h4 class="text-center text-muted my-1">Tabla de Notas</h4>
+                    <!--Select buscar-->
+                    <div class="col-6 mb-3">
+                        <select name="" id="select_cursante_buscar" class="form-select">
+                            <option value="">Seleccionar el Alumno Cursante</option>
+                        </select>
+                    </div>
+                    <!--Tabla-->
+                    <div class="col">
+                        <div class="table-responsive tabla">
+                            <table class="table table-striped table-bordered">
+                                <!--Encabezado-->
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th colspan="7">Primer Período</th>
+                                        <!--El número indica la cantidad de celdas a ocupar-->
+                                        <th colspan="7">segundo Período</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="nombre"></th>
+                                        <th scope="col">1°Nota</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">2°Nota</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">recuperatorio</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Editar</th>
+                                        <th scope="col">1°Nota</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">2°Nota</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">recuperatorio</th>
+                                        <th scope="col">Fecha</th>
+                                    </tr>
+                                </thead>
+                                <!--Entrada de Datos-->
+                                <tbody class="text-center" id="text-body"></tbody>
+                            </table>
+                        </div>
+    
+                    </div>                    
+                </div>
+                <!--Barra para Agregar Notas-->
+                <form action="" class="formulario" id="AgregarNotas">
+                    <div class="row d-flex justify-content-center datos  ">
+                        <h4 class="text-muted text-center my-1">Ingresar Nuevas Notas</h4>
+                        <div class="col-4 my-3">
+                            <select name="" class="form-select mb-3" id="select-Alumno">
+                                <option value="">Seleccionar Alumno Cursante</option>
+                            </select>
+                            <select name="" class="form-select mb-3" id="select_Examen">
+                                <option value="">Seleccionar Examen</option>
+                            </select>
+                        </div>
+                        <div class="col-4 d-flex flex-column my-3">
+                            <input type="Number" name="CoopTotal" id="CoopTotal" class="form-control w-50">
+                            <label for="" class="form-label text-muted">Calificacion</label>
+                            
+                            <input type="date" name="CoopTotal" id="CoopTotal" class="form-control"
+                                placeholder=" ingrese la Calificacion" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title=" fechaCalif">
+                            <label for="" class="form-label text-muted"> ingrese fecha de la calificacion</label>
+                        </div>
+                    </div> 
+                   
+                    
+                    <!--Barra de Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <!--Modal de Botones-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
+                                    todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+             <!--Modal para Editar 
+             <div class="modal fade" id="ModalEditar_1" tabindex="-1" aria-labelledby="modalEditarNota"
+             aria-hidden="true">
+             <div class="modal-dialog">
+                 <div class="modal-content">
+                     <form action="">
+                         <!--Encabezado Modal
+                         <div class="modal-header d-flex justify-content-center">
+                             <h5 class="modal-title text-center" id="modalEditarNota">Editar Calificacion y Fecha
+                             </h5>
+                             <button class="btn-close" data-bs-dismiss="modal"
+                                 aria-labely="boton para cerrar el modal"></button>
+                         </div>
+                         <!--Cuerpo Modal
+
+                         <div class="modal-body">
+                             <div class="row container  justify-content-center">
+
+                                 <!--Muestra la Nota y Fecha ya guardada en el sistema y permite editarlas
+
+                                 <div class="col-auto">
+                                     <label for="Viejo_InputNota">Cambie la Nota</label>
+                                     <input type="number" class="form-control" Id="Viejo_InputNota">
+                                     <label for="Viejo_InputFecha">Cambie la Fecha</label>
+                                     <input type="date" class="form-control" id="Viejo_InputFecha">
+                                 </div>
+                             </div>
+                             <!--Pie de Página Modal
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-primary"
+                                     data-bs-dismiss="modal">Guardar</button>
+                                 <button type="close" class="btn btn-outline-danger"
+                                     data-bs-dismiss="modal">Cancelar</button>
+                             </div>
+                         </div>
+                     </form>
+
+                 </div>
+             </div>-->
+
+        </div>
+    </main>
+    <!--Footer-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
+    </div>
+
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/RegistroNotas.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion(profesor).js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer(Profesor).js"></script>
+</body>
+
+</html>

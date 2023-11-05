@@ -1,0 +1,36 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .datos{
+    border-top: 6px solid #376c8f;
+    background: #fff9f9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+.contenedor div{
+    border-top: 1pt solid #376c8f;
+}
+
+/*Botones del Menu*/
+.container .btn1{
+    margin:10px ;
+    font-size: 25px;
+    background: #357798 ;
+    color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    height: 85px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.container .btn1:hover{
+    background: #2498e6;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translateY(-1px);
+    border-radius: 10px;
+}

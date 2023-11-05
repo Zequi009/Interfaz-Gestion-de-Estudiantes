@@ -1,0 +1,26 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+
+}
+header{
+    min-width: 100px;
+    border-bottom: 10px solid #3da5e2;
+}
+
+.container .figure .figure-caption a{
+    color: rgb(70, 132, 212);
+    margin-top: 10px;
+    text-decoration: underline 0.10em #f2f2f2;
+    transition: text-decoration-color 300ms ;
+}
+
+.container .figure .figure-caption a:hover{
+    transform: translateY(-3px);
+    color:rgb(52, 69, 71);
+    transition: all 0.3s ease 0s;
+    text-decoration-color:rgb(70, 65, 65) ;  
+}

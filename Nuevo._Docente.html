@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="Css-Js/NuevoPersonal.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Nuevo Docente</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                nueva materia
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            nuevo profesor
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--CUERPO PRINCIPAL-->
+    <main class="container">
+        <div class="row contenedor justify-content-center ">
+            <div class=" col">
+                <form  method="post" class="formulario text-muted">
+                    <!-- FILA Datos Personales-->
+                    <div class="row my-2 py-2 datos d-flex justify-content-center">
+                        <h4 class="text-center text-muted text-decoration-underline">Datos Generales</h4>
+                        <!--Nombre-->
+                        <div class="col-5">
+                            <label for="" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" placeholder="Ej: John">
+                        </div>
+                        <!--Apellido-->
+                        <div class="col-5">
+                            <label for="" class="form-label">apellido</label>
+                            <input type="text" class="form-control" class="Ej: Doe">
+                        </div>
+                        <!--fecha de Nacimiento-->
+                        <div class="col-3    my-3">
+                            <label for="" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <!--DNI-->
+                        <div class="col-3 my-3">
+                            <label for="" class="form-label">DNI</label>
+                            <input type="number" class="form-control" placeholder="Ej: 12.345.678">
+                        </div>
+                    </div>
+                    <!--Fila Contacto-->
+                    <div class="row my-2 datos d-flex justify-content-center">
+                        <h4 class="text-center text-muted text-decoration-underline">Contacto</h4>
+                        <!--Correo Electrónico-->
+                        <div class="col-6 my-3">
+                            <label for="" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" placeholder="Ej: JohnDoe@hotmail.com">
+                        </div>
+                        <!--Telefono-->
+                        <div class="col-4 my-3">
+                            <label for="" class="form-label">teléfono</label>
+                            <input type="text" class="form-control" placeholder="Ej: 0351-412345">
+                        </div>
+                    </div>
+                    <!--FILA Extras-->
+                    <div class="row my-2 datos d-flex justify-content-center">
+                        <h4 class="text-center text-decoration-underline text-muted">Contraseña</h4>
+                        <div class="col-6 d-flex justify-content-center my-3"> 
+                            <label for="" class="form-label">Contraseña del usuario</label>
+                            <input type="password" name="" id="" class="form-control">
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <!--Modal Guardar-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
+                                    todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn  btn-primary" onclick="validarTelefono()" >Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Cancelar-->
+                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
+                                    principal, ¿Seguro que desea Cancelar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Continuar editando</button>
+                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
+                                        Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
+    </div>
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+</body>
+</html>

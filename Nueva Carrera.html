@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevaCarrera.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <title>Nueva Carrera</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nueva Carrera
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Agregar Nueva Carrera
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Cuerpo de la página-->
+    <main class="container">
+        <!--Formulario-->
+        <div class="row contenedor justify-content-center ">
+            <div class="col-12 ">
+                <form action="" method="post" class="formulario text-muted ">
+                    <!--Datos Generales-->
+                    <div class="row my-2 py-2 datos d-flex justify-content-center">
+                        <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
+                        <div class="col-9">
+                            <!--Descripción-->
+                            <div class="form-floating mb-3">
+                                <input type="text" name="descripcion" id="descripcion" class="form-control textarea"
+                                    placeholder="Ej:  Tecnicatura Sup. en Electrónica" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Ej: Tecnicatura Sup. en Electrónica">
+                                <label for="descripcion">Descripción de la Carrera</label>
+                            </div>
+                        </div>
+                        <!--Turno-->
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <select name="" class="form-select" id="">
+                                    <option selected>Seleccionar Turno</option>
+                                    <option value="1">Mañana</option>
+                                    <option value="2">Tarde</option>
+                                    <option value="3">Noche</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Nombre del Plan-->
+                        <div class="row my-3 py-2 datos justify-content-center">
+                            <h4 class="text-muted text-center text-decoration-underline">Plan</h4>
+                            <!--Descripción del plan-->
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="plan" id="plan" class="form-control" placeholder="Ej: Cohorte 2016"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Ej: Cohorte 2016">
+                                    <label for="plan">Descripción</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <!--Fecha de Inicio-->
+                                <div class="form-floating mb-3">
+                                    <input type="date" name="fechaini" id="barrio" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Cuando comienza el Plan">
+                                    <label for="barrio">Fecha de Inicio</label>
+                                </div>
+                            </div>
+                            <!--Fecha de Cierre-->
+                            <div class="col-4">
+                                <div class="form-floating mb-3">
+                                    <input type="date" name="fechacie" id="fechacie" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Fecha de Cierre del Plan, si no está, dejar en blanco">
+                                    <label for="fechacie">Fecha de Cierre</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btnGuardar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Guardar</button>
+
+                            <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
+                                data-bs-target="#modalcancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <!--Modal Guardar-->
+                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar
+                                    bien todo ¿Desea Continuar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Cancelar-->
+                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todos los datos escritos hasta ahora se perderán y será redirigido a la ventana
+                                    principal, ¿Seguro que desea Cancelar?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
+                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Sí, deseo
+                                        Cancelar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3" id="footer"></footer>
+    </div>
+
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+</body>
+</html>
