@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="post" id="miFormulario">
+        <section>
+            <article>
+                <input type="text" id="descripcion" name="descripcion" placeholder="descripcion">
+            </article>
+            <article>
+                <input type="text" id="telefono" name="telefono" placeholder="telefono">
+            </article>
+            <article>
+                <input type="text" id="email" name="email" placeholder="correo">
+            </article>
+            <article>
+                <input type="text" id="direccion" name="direccion" placeholder="direccion">
+            </article>
+            <article>
+                <input type="number" id="piso" name="piso" placeholder="piso">
+            </article>
+            <article>
+                <input type="text" id="depto" name="depto" placeholder="depto">
+            </article>
+            <article>
+                <input type="text" name="dpto" id="barrio" placeholder="barrio">
+            </article>
+            <article>
+                <input type="text" name="localidad" id="localidad" placeholder="barrio">
+            </article>
+            <article>
+                <input type="time" id="desde" name="desde" placeholder="hora desde">
+                <input type="time" id="hasta" name="hasta" placeholder="hora hasta">
+            </article>
+            <article>
+                <select name="diaInicio" id="diaInicio">
+                    <option value="lunes">lunes</option>
+                    <option value="martes">martes</option>
+                    <option value="miercoles">miercoles</option>
+                </select>
+                <select name="diaFin" id="diaFin">
+                    <option value="lunes">lunes</option>
+                    <option value="martes">martes</option>
+                    <option value="miercoles">miercoles</option>
+                </select>
+            </article>
+            <article>
+                <button type="submit" id="guardar">Guardar datos</button>
+            </article>
+        </section>
+    </form>
+
+    <script>
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+
+            // Obtener los valores del formulario
+            const descripcion = document.getElementById('descripcion').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value
+            const direccion = document.getElementById('direccion').value;
+            const piso = document.getElementById('piso').value;
+            const depto = document.getElementById('depto').value;
+            const barrio = document.getElementById('barrio').value;
+            const localidad = document.getElementById('localidad').value
+            const desde = document.getElementById('desde').value;
+            const hasta = document.getElementById('hasta').value;
+            const diaInicio = document.getElementById('diaInicio').value;
+            const diaFin = document.getElementById('diaFin').value;
+
+            // Mostrar los datos en la consola
+            console.log('Datos a enviar a la API:', {
+                descripcion,
+                telefono,
+                email,
+                direccion,
+                piso,
+                depto,
+                barrio,
+                localidad,
+                desde,
+                hasta,
+                diaInicio,
+                diaFin,
+            });
+
+            // Crear un objeto con los datos del formulario
+            const formData = {
+                DESCRIPCION: descripcion,
+                TELEFONO: telefono,
+                EMAIL: email,
+                DIRECCION: direccion,
+                PISO: piso,
+                DEPTO: depto,
+                BARRIO: barrio,
+                LOCALIDAD: localidad,
+                HORA_DESDE: desde,
+                HORA_HASTA: hasta,
+                DIA_DESDE: diaInicio,
+                DIA_HASTA: diaFin,
+            };
+
+            // Enviar los datos a la API
+            fetch('http://localhost:8000/API/SEDES/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al enviar el formulario a la API');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Respuesta de la API:', data); // Imprimir la respuesta en la consola
+                })
+                .catch(error => {
+                    console.error('Error:', error.message);
+                    console.error('Detalles del error:', error.response); // Agregado para mostrar detalles del error
+                });
+
+        });
+    </script>
+</body>
+
+</html>
