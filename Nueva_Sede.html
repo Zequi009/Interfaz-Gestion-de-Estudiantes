@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -7,241 +8,165 @@
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/Nueva-Sede.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
     <title>Nueva Sede</title>
 </head>
 
 <body>
-<!--Barra de Navegacion-->
-<div class="container my-3">
+    <!--Barra de Navegacion-->
+    <div class="container my-3">
 
-    <header class="" id="navegacion"></header>
-    <div class="row mt-2">
-        <div class="col-auto">
-            <nav class="migas mt-3" aria-label="camino">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="#" class="B1">
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nueva Carrera
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-circle-fill" viewBox="0 0 16 16">
                                 <circle cx="8" cy="8" r="8" />
                             </svg>
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#" class="B2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-circle-fill" viewBox="0 0 16 16">
-                                <circle cx="8" cy="8" r="8" />
-                            </svg>
-                            Nuevo
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#" class="B2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-circle-fill" viewBox="0 0 16 16">
-                                <circle cx="8" cy="8" r="8" />
-                            </svg>
-                            Nueva Carrera
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-circle-fill" viewBox="0 0 16 16">
-                            <circle cx="8" cy="8" r="8" />
-                        </svg>
-                        Nueva Sede 
-                    </li>
-                </ol>
-            </nav>
+                            Nueva Sede
+                        </li>
+                    </ol>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
 
     <main class="container">
-        <!--Formulario-->
         <div class="row contenedor justify-content-center ">
             <div class="col-12 ">
-                <form action="" method="post" class="formulario text-muted ">
-                    <!--datos personales-->
-                    <div class="row my-2 py-2 datos d-flex justify-content-center">
+                <!--Formulario-->
+                <form method="post" class="formulario text-muted " id="formulario">
+                    <!--datos-->
+                    <div class="row my-3 py-3 datos d-flex justify-content-center">
                         <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
-                        <div class="col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="descripcion" id="descripcion" class="form-control"
-                                    placeholder="Ej: Sede Villa Libertador" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title=" Ej: sede villa libertador">
-                                <label for="descripcion">Descripcion de la sede</label>
-                            </div>
+                        <!--Descripcion-->
+                        <div class="col-6 mb-3">
+                            <label for="descripcion" class="form-label text-decoration-underline">Descripción</label>
+                            <input type="text" name="descripcion" class="form-control" placeholder="Ej:Villa Libertador"
+                                id="descripcion">
                         </div>
-                        <div class="col-4">
-                            <div class="form-floating mb-6">
-                                <input type="text" name="telefono" id="telefono" class="form-control"
-                                    placeholder="Ej:john Doe" data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" telefono de la sede">
-                                <label for="telefono">Teléfono</label>
-                            </div>
+                        <!--Telefono-->
+                        <div class="col-4 mb-3">
+
+                            <label for="telefono" class="form-label text-decoration-underline">Teléfono</label>
+                            <input type="text" name="telefono" class="form-control" placeholder="" id="telefono">
                         </div>
+                        <!--Correo-->
                         <div class="col-9">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="correo" id="correo" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top" title=" correo de la sede">
-                                <label for="correo">Correo Electronico</label>
-                            </div>
+                            <label for="email" class="form-label text-decoration-underline">Correo Electrónico</label>
+                            <input type="text" name="email" class="form-control" placeholder="Ej: john_doe@hotmail.com"
+                                id="email">
                         </div>
                     </div>
                     <!--Direccion-->
-                    <div class="row my-3 py-2 datos  justify-content-between">
+                    <div class="row my-3 py-2 datos d-flex justify-content-center">
                         <h4 class="text-muted text-center text-decoration-underline">Dirección</h4>
+                        <!--direccion-->
                         <div class="col-6">
-                            <!--Localidad-->
-                            <div class="form-floating mb-3">
-                                <input type="text" name="localidad" id="localidad" class="form-control"
-                                    placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" localidad del alumno, si no tiene dejarlo en blanco">
-                                <label for="localidad">Localidad</label>
-                            </div>
+                            <label for="direccion" class="form-label text-decoration-underline">Calle</label>
+                            <input type="text" name="direccion" class="form-control" placeholder="Ej.Las Rosas 269"
+                                id="direccion">
                         </div>
-                        <div class="col-6">
-                            <!--Barrio-->
-                            <div class="form-floating mb-3">
-                                <input type="text" name="Barrio" id="barrio" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" barrio del alumno, si no tiene dejarlo en blanco">
-                                <label for="barrio">Barrio</label>
-                            </div>
-                        </div>
-                        <!--Calle-->
-                        <div class="col-6">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="calle" id="calle" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" calle del alumno, si no tiene dejarlo en blanco">
-                                <label for="calle">Calle</label>
-                            </div>
-                        </div>
-                        <!--Numero-->
-                        <div class="col-2   ">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="numero" id="numero" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" numero del alumno, si no tiene dejarlo en blanco">
-                                <label for="numero">Número</label>
-                            </div>
-                        </div>
-                        <!--piso-->
+                        <!--Piso-->
                         <div class="col-2">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="piso" id="piso" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title=" piso del depertamento del alumno, si no tiene dejarlo en blanco">
-                                <label for="piso">Piso</label>
-                            </div>
+                            <label for="piso" class="form-label text-decoration-underline">Piso</label>
+                            <input type="number" name="piso" class="form-control" placeholder="EJ: 5" id="piso">
                         </div>
-                        <!--Dpto-->
+                        <!--Depto-->
                         <div class="col-2">
-                            <div class="form-floating mb-3">
-                                <input type="text" name="dpto" id="dpto" class="form-control" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="depertamento del alumno, si no tiene dejarlo en blanco">
-                                <label for="dpto">Depto.</label>
-                            </div>
+                            <label for="depto" class="form-label text-decoration-underline">Depto</label>
+                            <input type="text" name="depto" class="form-control" placeholder="Ej: 34B" id="depto">
+                        </div>
+                        <!--Barrio-->
+                        <div class="col-4 my-3">
+                            <label for="barrio" class="form-label text-decoration-underline">Barrio</label>
+                            <input type="text" name="barrio" class="form-control" placeholder="EJ: Gral Paz"
+                                id="barrio">
+                        </div>
+                        <!--Localidad-->
+                        <div class="col-4 my-3">
+                            <label for="localidad" class="form-label text-decoration-underline">Localidad</label>
+                            <input type="text" name="localidad" class="form-control" placeholder="EJ: Unquillo"
+                                id="localidad">
                         </div>
                     </div>
                     <!--Dia y Hora-->
-                    <div class="row my-2 py-2 datos justify-content-center">
+                    <div class="row my-3 py-3 datos d-flex  justify-content-evenly">
                         <h4 class="text-muted text-decoration-underline text-center">Día y Hora</h4>
                         <!--Dias-->
-                        <div class="col-4">
+                        <div class="col-auto">
                             <h6 class="text-decoration-underline">seleccione los dias Hábiles</h6>
                             <span class="fs-6"> De:</span>
-                            <select class="form-select form-select mb-3 mx-1" aria-label=".form-select-lg example">
-                                <option selected>Día de la Semana</option>
-                                <option value="1">Lunes</option>
-                                <option value="2">Martes</option>
-                                <option value="3">Miercoles</option>
-                                <option value="3">Jueves</option>
-                                <option value="3">Viernes</option>
+                            <select name="dia_desde" id="dia_desde" class="form-select">
+                                <option value="" selected>Sleccione un día de la Semana</option>
+                                <option value="lunes">lunes</option>
+                                <option value="martes">martes</option>
+                                <option value="miercoles">miercoles</option>
+                                <option value="jueves">jueves</option>
                             </select>
                             <span class="fs-6">A:</span>
-                            <select class="form-select form-select mb-3" aria-label=".form-select-lg example">
-                                <option selected>Día de la Semana</option>
-                                <option value="1">Lunes</option>
-                                <option value="2">Martes</option>
-                                <option value="3">Miercoles</option>
-                                <option value="3">Jueves</option>
-                                <option value="3">Viernes</option>
+                            <select name="dia_hasta" id="dia_hasta" class="form-select">
+                                <option value="" selected>Sleccione un día de la Semana</option>
+                                <option value="lunes">lunes</option>
+                                <option value="martes">martes</option>
+                                <option value="miercoles">miercoles</option>
+                                <option value="jueves">jueves</option>
                             </select>
                         </div>
-                        <!--Hora-->
-                        <div class="col-4">
-                            <h6 class="text-decoration-underline"> seleccione los horarios</h6>
-                            <div class="form-floating">
-                                <input type="time" name="Hdesde" id="Hdesde" class="form-control mb-4" placeholder="Ej:john "
-                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Horario de Apertura">
-                                <label for="Hdesde">Desde</label>
 
-                                <div class="form-floating mb-3">
-                                    <input type="time" name="Hhasta" id="Hhasta" class="form-control" placeholder="Ej:john "
-                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Horario de Cierre">
-                                    <label for="Hhasta">Hasta</label>
-                                </div>
-                            </div>
+                        <!--Hora-->
+                        <div class="col-auto d-flex flex-column">
+                            <h6 class="text-decoration-underline"> seleccione los horarios</h6>
+                            <span class="fs-6">Desde:</span>
+                            <input type="time" name="hora_desde" class="form-control" id="hora_desde">
+
+                            <span class="fs-6">Hasta:</span>
+                            <input type="time" name="hora_hasta" class="form-control" id="hora_hasta">
                         </div>
                     </div>
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
-                        <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Guardar</button>
-
-                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#modalcancelar">Cancelar</button>
-                        </div>
-                    </div>
-                    <!--Modal Guardar-->
-                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
-                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
-                                    todo ¿Desea Continuar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Modal Cancelar-->
-                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
-                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
-                                    princip, ¿Seguro que desea Cancelar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
-                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
-                                        Cancelar</a>
-                                </div>
+                        <div class="row justify-content-center py-3 barraBotones">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <!--Guardar-->
+                                <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+                                <!--Cancelar-->
+                                <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
+                                    data-bs-target="#modalcancelar">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -249,15 +174,36 @@
             </div>
         </div>
     </main>
+    <!--Toast Success-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Toast Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
     <!--Footer-->
     <div class="container">
         <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
-
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
-    <script src="../Nueva carpeta/Css-Js/NUevaSede.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NuevaSede.js"></script>
 </body>
 
 </html>
