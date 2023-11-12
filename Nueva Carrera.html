@@ -75,7 +75,8 @@
                         <!--Descripción-->
                         <div class="col-7 mb-1 d-flex align-self-center flex-column ">
                             <label for="descripcion" class="form-label text-decoration-underline">Descripción</label>
-                            <input type="text" name="desricpcion" class="form-control" placeholder="Ej: Tecnicatura Sup. en Metalurgica" id="descripcion">
+                            <input type="text" name="desricpcion" class="form-control"
+                                placeholder="Ej: Tecnicatura Sup. en Metalurgica" id="descripcion">
                         </div>
                         <!--Nombre del Plan-->
                         <div class="row my-3 py-2 datos justify-content-center">
@@ -83,7 +84,8 @@
                             <!--Descripción del plan-->
                             <div class="col-4">
                                 <label for="descripcionPlan" class="form-label">Descripción</label>
-                                <input type="text" name="descripcionPlan" class="form-control" placeholder="Ej: cohorte 2016" id="descripcionPlan">
+                                <input type="text" name="descripcionPlan" class="form-control"
+                                    placeholder="Ej: cohorte 2016" id="descripcionPlan">
                             </div>
                             <div class="col-3">
                                 <!--Fecha de Inicio-->
@@ -110,18 +112,19 @@
         </div>
     </main>
     <!--Toast-->
-    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
-        <div class="toast-header border-botomm border-light text-dark">
-          <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
-          <strong class="me-auto">!Lo conseguimos!</strong>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <!--Success-->
+        <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+            <div class="toast-header border-botomm border-light text-dark">
+                <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+                <strong class="me-auto">!Lo conseguimos!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                los datos se guardaron correctamente.
+            </div>
         </div>
-        <div class="toast-body">
-          los datos se guardaron correctamente.
-        </div>
-     </div>
-    
-     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="errorToast">
+        <!--Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
         <div class="toast-header border-botomm border-light text-dark">
             <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
             <strong class="me-auto">¡Oh No!</strong>
@@ -141,4 +144,5 @@
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="../Nueva carpeta/Css-Js/NuevaCarpeta.js"></script>
 </body>
+
 </html>
