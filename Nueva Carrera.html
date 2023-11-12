@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevaCarrera.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
     <title>Nueva Carrera</title>
@@ -67,118 +68,69 @@
         <!--Formulario-->
         <div class="row contenedor justify-content-center ">
             <div class="col-12 ">
-                <form action="" method="post" class="formulario text-muted ">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
                     <!--Datos Generales-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center">
                         <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
-                        <div class="col-9">
-                            <!--Descripción-->
-                            <div class="form-floating mb-3">
-                                <input type="text" name="descripcion" id="descripcion" class="form-control textarea"
-                                    placeholder="Ej:  Tecnicatura Sup. en Electrónica" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Ej: Tecnicatura Sup. en Electrónica">
-                                <label for="descripcion">Descripción de la Carrera</label>
-                            </div>
-                        </div>
-                        <!--Turno-->
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <select name="" class="form-select" id="">
-                                    <option selected>Seleccionar Turno</option>
-                                    <option value="1">Mañana</option>
-                                    <option value="2">Tarde</option>
-                                    <option value="3">Noche</option>
-                                </select>
-                            </div>
+                        <!--Descripción-->
+                        <div class="col-7 mb-1 d-flex align-self-center flex-column ">
+                            <label for="descripcion" class="form-label text-decoration-underline">Descripción</label>
+                            <input type="text" name="desricpcion" class="form-control" placeholder="Ej: Tecnicatura Sup. en Metalurgica" id="descripcion">
                         </div>
                         <!--Nombre del Plan-->
                         <div class="row my-3 py-2 datos justify-content-center">
                             <h4 class="text-muted text-center text-decoration-underline">Plan</h4>
                             <!--Descripción del plan-->
-                            <div class="col-6">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="plan" id="plan" class="form-control" placeholder="Ej: Cohorte 2016"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Ej: Cohorte 2016">
-                                    <label for="plan">Descripción</label>
-                                </div>
-                            </div>
                             <div class="col-4">
+                                <label for="descripcionPlan" class="form-label">Descripción</label>
+                                <input type="text" name="descripcionPlan" class="form-control" placeholder="Ej: cohorte 2016" id="descripcionPlan">
+                            </div>
+                            <div class="col-3">
                                 <!--Fecha de Inicio-->
-                                <div class="form-floating mb-3">
-                                    <input type="date" name="fechaini" id="barrio" class="form-control"
-                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Cuando comienza el Plan">
-                                    <label for="barrio">Fecha de Inicio</label>
-                                </div>
+                                <label for="plan_start_date" class="form-label">Fecha de Inicio</label>
+                                <input type="date" name="plan_start_date" class="form-control" id="plan_start_date">
                             </div>
                             <!--Fecha de Cierre-->
-                            <div class="col-4">
-                                <div class="form-floating mb-3">
-                                    <input type="date" name="fechacie" id="fechacie" class="form-control"
-                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Fecha de Cierre del Plan, si no está, dejar en blanco">
-                                    <label for="fechacie">Fecha de Cierre</label>
-                                </div>
+                            <div class="col-3 mt-1">
+                                <label for="plan_end_date" class="form_label">Fecha de Fin</label>
+                                <input type="date" name="plan_end_date" class="form-control" id="plan_end_date">
                             </div>
                         </div>
                     </div>
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btnGuardar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Guardar</button>
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
 
-                            <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#modalcancelar">Cancelar</button>
-                        </div>
-                    </div>
-                    <!--Modal Guardar-->
-                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
-                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar
-                                    bien todo ¿Desea Continuar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Modal Cancelar-->
-                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
-                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Todos los datos escritos hasta ahora se perderán y será redirigido a la ventana
-                                    principal, ¿Seguro que desea Cancelar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
-                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Sí, deseo
-                                        Cancelar</a>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </main>
+    <!--Toast-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+          <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+          <strong class="me-auto">!Lo conseguimos!</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          los datos se guardaron correctamente.
+        </div>
+     </div>
+    
+     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="errorToast">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
     <!--Footer-->
     <div class="container">
         <footer class="footer mt-5 mb-3" id="footer"></footer>
@@ -187,5 +139,6 @@
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NuevaCarpeta.js"></script>
 </body>
 </html>

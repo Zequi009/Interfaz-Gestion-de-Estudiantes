@@ -1,3 +1,35 @@
-.toast-container .toast-header, .toast-body {
-    background: #b1f9b1;
+.T-success {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    -webkit-box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    -moz-box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    /* Resto de estilos para el toast */
+}
+
+.T-success .toast-header {
+    background: #a3f78cc6;
+}
+
+.T-success .toast-body {
+    background: #a3f78c;
+}
+
+.T-Error {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    -webkit-box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    -moz-box-shadow: 15px 20px 6px -4px rgba(196, 179, 179, 1);
+    /* Resto de estilos para el toast */
+}
+
+.T-Error .toast-header {
+    background: #f7a28c8b;
+}
+
+.T-Error .toast-body {
+    background: #f7a28cc6;
 }

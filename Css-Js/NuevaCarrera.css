@@ -4,10 +4,6 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
 }
-.contenedor .datos .textarea{
-    height: 78px;
-    max-height: 150px;
-}
 .contenedor .barraBotones .btnGuardar{
     background: #3890ca;
     color: #f2f2f2;
