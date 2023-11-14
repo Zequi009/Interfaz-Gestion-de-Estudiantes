@@ -63,29 +63,29 @@
     <main class="container">
         <div class="row contenedor justify-content-center ">
             <div class=" col">
-                <form  method="post" class="formulario text-muted">
+                <form  method="post" class="formulario text-muted" id="formulario">
                     <!-- FILA Datos Personales-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center">
                         <h4 class="text-center text-muted text-decoration-underline">Datos Generales</h4>
                         <!--Nombre-->
                         <div class="col-5">
                             <label for="" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ej: John">
+                            <input type="text" class="form-control" placeholder="Ej: John" name="nombre" id="nombre">
                         </div>
                         <!--Apellido-->
                         <div class="col-5">
-                            <label for="" class="form-label">apellido</label>
-                            <input type="text" class="form-control" class="Ej: Doe">
+                            <label for="apellido" class="form-label">apellido</label>
+                            <input type="text" class="form-control" class="Ej: Doe" name="apellido" id="apellido">
                         </div>
                         <!--fecha de Nacimiento-->
                         <div class="col-3    my-3">
                             <label for="" class="form-label">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control">
+                            <input type="date" class="form-control" name="Fnacimiento" id="Fnacimiento">
                         </div>
                         <!--DNI-->
                         <div class="col-3 my-3">
                             <label for="" class="form-label">DNI</label>
-                            <input type="number" class="form-control" placeholder="Ej: 12.345.678">
+                            <input type="number" class="form-control" placeholder="Ej: 12.345.678" name="dni" id="dni">
                         </div>
                     </div>
                     <!--Fila Contacto-->
@@ -94,12 +94,12 @@
                         <!--Correo Electrónico-->
                         <div class="col-6 my-3">
                             <label for="" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" placeholder="Ej: JohnDoe@hotmail.com">
+                            <input type="email" class="form-control" placeholder="Ej: JohnDoe@hotmail.com" name="email" id="email">
                         </div>
                         <!--Telefono-->
                         <div class="col-4 my-3">
                             <label for="" class="form-label">teléfono</label>
-                            <input type="text" class="form-control" placeholder="Ej: 0351-412345">
+                            <input type="text" class="form-control" placeholder="Ej: 0351-412345" name="telefono" id="telefono">
                         </div>
                     </div>
                     <!--FILA Extras-->
@@ -107,60 +107,15 @@
                         <h4 class="text-center text-decoration-underline text-muted">Contraseña</h4>
                         <div class="col-6 d-flex justify-content-center my-3"> 
                             <label for="" class="form-label">Contraseña del usuario</label>
-                            <input type="password" name="" id="" class="form-control">
+                            <input type="password" name="contraseña" id="contraseña" class="form-control">
                         </div>
                     </div>
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btnGuardar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Guardar</button>
+                            <button type="submit" class="btn btnGuardar mx-3" id="btnGuardar">Guardar</button>
 
-                            <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#modalcancelar">Cancelar</button>
-                        </div>
-                    </div>
-                    <!--Modal Guardar-->
-                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
-                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
-                                    todo ¿Desea Continuar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn  btn-primary" onclick="validarTelefono()" >Si, deseo Continuar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Modal Cancelar-->
-                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
-                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
-                                    principal, ¿Seguro que desea Cancelar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Continuar editando</button>
-                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
-                                        Cancelar</a>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
                 </form>
@@ -173,6 +128,8 @@
     </div>
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NUevoDoncente.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
 </html>
