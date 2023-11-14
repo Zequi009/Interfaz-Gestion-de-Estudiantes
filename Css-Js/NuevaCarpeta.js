@@ -42,7 +42,6 @@ document.getElementById('formulario').addEventListener('submit', function (event
             throw new Error('Error al enviar el formulario a la Api');
         }
         return response.json();
-        //Mostrar Toas cuando los datos se guardan
 
     })
     .then(data => {
