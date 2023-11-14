@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
-    <link rel="stylesheet" href="Css-Js/NuevoPersonal.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevoPersonal.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
     <title>Nuevo Docente</title>
 </head>
 <body>
@@ -122,6 +122,27 @@
             </div>
         </div>
     </main>
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Toast Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
     <!--FOOTER-->
     <div class="container">
         <footer class="footer mt-5 mb-3 " id="footer"></footer>
