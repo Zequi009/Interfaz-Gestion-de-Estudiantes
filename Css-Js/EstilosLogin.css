@@ -83,3 +83,18 @@ body{
     text-decoration-color:rgb(70, 65, 65) ;
 
   }
+
+  .florkContenedor {
+    width: 90px; /* Ancho del contenedor */
+    height: 90px; /* Altura del contenedor */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    overflow: hidden; /* Recorta la imagen para que se ajuste al círculo */
+    border: 2px solid #ccc; /* Añade un borde opcional */
+  }
+  
+  .florkContenedor .flork {
+    width: 100%; /* Para asegurarse de que la imagen ocupe todo el contenedor circular */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+  }
+  

@@ -77,9 +77,8 @@
                                       </svg>
                                     Ver
                                 </a>
-                                <select name="" id="selectSede" class="form-select">
-                                    <option value="1">Elegir la Sede</option>
-                                </select>
+                                <!--Select Sede-->
+                                <select name="sede" id="selectSede" class="form-select"></select>
                             </div>
                             <!--BOTON NUEVA SEDE-->
                             <div class="col-auto d-flex justify-content-center">
@@ -98,10 +97,8 @@
                         <div class="col-6 d-flex flex-column">
                             <!-- SELECCIONAR CARRERA // VER MAS-->
                             <div class="input-group">
-
-                                <select name="" id="selectSede" class="form-select">
-                                    <option value="1">Elegir la Carrera</option>
-                                </select>
+                                <!--Select Carrera-->
+                                <select name="carrera" id="selectCarrera" class="form-select"></select>
                                 
                                 <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal" data-bs-target="#modalCarrera">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
@@ -130,72 +127,27 @@
                         <!--Turno-->
                         <h4 class="text-center text-muted text-decoration-underline">Turno y Código de Carrera</h4>
                         <div class="col-4 my-2">
-                            <select name="" id="#" class="form-select">
-                                <option value="1">Seleccionar Turno</option>
+                            <select name="turno" id="selectTurno" class="form-select">
+                                <option value="">Seleccionar Turno</option>
+                                <option value="mañana">Mañana</option>
+                                <option value="tarde">Tarde</option>
+                                <option value="noche">Noche</option>
                             </select>
                         </div>
                         <!--Codigo de Carrera-->
                         <div class="col-6 my-2 d-flex ">
-                            <input type="text" id="InputCodigo" class="form-control" placeholder="Ej: cohorte 2016">
-                            <label for="InputCodigo" class="form-label text-muted mx-1">Ingrese el Código de la
-                                Carrera</label>
+                            <input type="text" id="InputCodigo" class="form-control" placeholder="Ej: EE024950">
+                            <label for="InputCodigo" class="form-label text-muted mx-1">Ingrese el Código de la Carrera</label>
                         </div>
                     </div>
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn BtnGuardar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Guardar</button>
+                            <button type="submit" class="btn BtnGuardar mx-3">Guardar</button>
 
-                            <button type="button" class="btn BtnCancelar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#modalcancelar">Cancelar</button>
+                            <button type="button" class="btn BtnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
-                    <!--Modal Guardar-->
-                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
-                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
-                                    todo ¿Desea Continuar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--Modal Cancelar-->
-                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
-                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
-                                    principal, ¿Seguro que desea Cancelar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
-                                    <a href="../Nueva carpeta/Index.html" type="button" class="btn btn-danger">Si, deseo
-                                        Cancelar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!--Modal Editar Sede-->
                     <div class="modal fade" id="modalMostrar" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
                         <div class="modal-dialog">
@@ -326,48 +278,14 @@
     </main>
     <!--Footer-->
     <div class="container">
-        <footer class="footer mt-5">
-            <div class="row datos d-flex justify-content-center align-items-start pt-1">
-                <div class="col-auto">
-                    <ul class="list-unstyled">
-                      <li><a href="../Nueva carpeta/Menu_Principal.html" class="tex-muted text-decoration-none">Inicio</a></li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <ul class="list-unstyled">
-                      <li><a href="../Nueva carpeta/Inscripciones.html" class="tex-muted text-decoration-none">Inscripciones</a></li>
-                      <li><a href="../Nueva carpeta/Libro de Temas(Preceptor).html" class="tex-muted text-decoration-none">Libro de Temas</a></li>
-                      <li><a href="../Nueva carpeta/Listado-Cooperadora(sombra, barra de Búsqueda, editar-eliminar).html" class="tex-muted text-decoration-none">Ver Cooperadora</a></li>
-                      <li><a href="../Nueva carpeta/Listado_de_Asitencias(Preceptor).html" class="tex-muted text-decoration-none">Registro de Asistencias</a></li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <ul class="list-unstyled">
-                      <li><a href="../Nueva carpeta/Nueva_Carrera(Sombra).html" class="tex-muted text-decoration-none">Nueva Sede</a></li>
-                      <li><a href="../Nueva carpeta/Nueva Carrera(sombra).html" class="tex-muted text-decoration-none">Nueva Carrera</a></li>
-                      <li><a href="../Nueva carpeta/Nueva_Materia(Inputs, sombra).html" class="tex-muted text-decoration-none">Nueva Materia</a></li>
-                      <li><a href="../Nueva carpeta/Nuevo Alumno(Sombra).html" class="tex-muted text-decoration-none">Nuevo Alumno</a></li>
-                      <li><a href="../Nueva carpeta/Nuevo_Personal.html" class="tex-muted text-decoration-none">Nuevo Personal</a></li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <ul class="list-unstyled">
-                      <li><a href="../Nueva carpeta/Listado_Alumnos(Agregar sombra y cambiar barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de Alumnos</a></li>
-                      <li><a href="../Nueva carpeta/Listado_Materias(Sombra y Barra de Búsqueda).html" class="tex-muted text-decoration-none">Listado de Materias</a></li>
-                      <li><a href="../Nueva carpeta/Listado_Carreras(Cambiar Barra de búsqueda).html" class="tex-muted text-decoration-none">Listado de carreras</a></li>
-                      <li><a href="../Nueva carpeta/Listado_de_Notas(preceptor).html" class="tex-muted text-decoration-none">Listado de Notas</a></li>
-                    </ul>
-                </div>
-                
-            <span class="text-center text-muted">Desarrollado por JokerWare S.A. Todos los derechos Reservados</span>
-            </div>
-        </footer>
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
+
     <!--<script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/SedeCarrera.js"></script>
 </body>
 
 </html>
