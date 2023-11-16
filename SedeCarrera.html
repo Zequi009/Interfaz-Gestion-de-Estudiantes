@@ -70,7 +70,7 @@
                             <!-- Seleccionar sede // Ver mas-->
                             <div class="input-group">
                                 <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modalMostrar">
+                                data-bs-target="#modalSede">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
                                         <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
                                         <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                     <!--Modal Editar Sede-->
-                    <div class="modal fade" id="modalMostrar" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
+                    <div class="modal fade" id="modalSede" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -162,15 +162,15 @@
                                     <div class="row-auto border rounded py-1 px-1">
                                         <div class="col">
                                             <label for="" class="form-label">Descripcion de la Sede</label>
-                                            <input type="text" class="form-control" disabled>
+                                            <input type="text" class="form-control" name="descripcion" id="descripcionSede" disabled>
                                         </div>
                                         <div class="col-6">
                                             <label for="" class="form-label">Telefono</label>
-                                            <input type="text" class="form-control" disabled>
+                                            <input type="text" class="form-control"  name="telefono" id="telefonoSede" disabled>
                                         </div>
                                         <div class="col-auto">
                                             <label for="" class="form-label">Correo Electrónico</label>
-                                            <input type="text" class="form-control" disabled>
+                                            <input type="text" class="form-control" name="email" id="emailSede" disabled>
                                         </div>
                                     </div>
                                     <!--Direccion-->
@@ -178,23 +178,21 @@
                                     <div class="row-auto border rounded mt-1 py-1 px-1 ">
                                         <div class="col">
                                             <label for="" class="form-label">Localidad</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="localidad" id="localidadSede" class="form-control" disabled>
                                         </div>
                                         <div class="col-9">
                                             <label for="" class="form-label">Barrio</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="barrio" id="barrioSede" class="form-control" disabled>
                                         </div>
                                         <div class="col-9">
-                                            <label for="" class="form-label">Calle</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <label for="" class="form-label">Direccion</label>
+                                            <input type="text" name="direccion" id="direccionSede" class="form-control" disabled>
                                         </div>
                                         <div class="col-auto d-flex justify-content-between mt-3">
-                                            <label for="" class="form-label px-3">Número</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
                                             <label for="" class="form-label px-3">Piso</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="piso" id="pisoSede" class="form-control" disabled>
                                             <label for="" class="form-label px-3">Dpto</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="depto" id="deptoSede" class="form-control" disabled>
                                         </div>
                                     </div>
                                     <!--Dia y Hora-->
@@ -202,15 +200,15 @@
                                     <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-between">
                                         <div class="col-3">
                                             <label for="" class="form-label">De</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="diaDe" id="diaDeSede" class="form-control" disabled>
                                             <label for="" class="form-label">A</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="diaA" id="diaASede" class="form-control" disabled>
                                         </div>
                                         <div class="col-3 ">
                                             <label for="" class="form-label">Desde</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="horaDesde" id="horaDesdeSede" class="form-control" disabled>
                                             <label for="" class="form-label">Hasta</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="horaHasta" id="horaHastaSede" class="form-control" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +240,7 @@
                                     <div class="row-auto border rounded py-1 px-1">
                                         <div class="col">
                                             <label for="" class="form-label">Descripcion de la Carrera</label>
-                                            <input type="text" class="form-control" disabled>
+                                            <input type="text" class="form-control" id="descripcionCarrera" name="descripcion" disabled>
                                         </div>
                                     </div>
                                     <!--Plan de la Carrera-->
@@ -250,11 +248,11 @@
                                     <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-center">
                                         <div class="col-9">
                                             <label for="" class="form-label">Plan de La carrera</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="PlandelaCarrera" id="planCarrera" class="form-control" disabled>
                                             <label for="" class="form-label">Fecha de inicio</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="fechaInicio" id="fechaInicioCarrera" class="form-control" disabled>
                                             <label for="" class="form-label">Fecha de Cierre</label>
-                                            <input type="text" name="" id="" class="form-control" disabled>
+                                            <input type="text" name="fechaCierre" id="fechaCierreCarrera" class="form-control" disabled>
                                         </div>
                                     </div>
                                 </div>
