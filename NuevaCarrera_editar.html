@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevaCarrera.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <title>Nueva Carrera</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nueva Carrera
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Agregar Nueva Carrera
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Editar
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--Cuerpo de la página-->
+    <main class="container">
+        <!--Formulario-->
+        <div class="row contenedor justify-content-center ">
+            <div class="col-12 ">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
+                    <!--Datos Generales-->
+                    <div class="row my-2 py-2 datos d-flex justify-content-center">
+                        <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
+                        <!--Descripción-->
+                        <div class="col-7 mb-1 d-flex align-self-center flex-column ">
+                            <label for="descripcion" class="form-label text-decoration-underline">Descripción</label>
+                            <input type="text" name="desricpcion" class="form-control"
+                                placeholder="Ej: Tecnicatura Sup. en Metalurgica" id="descripcion">
+                        </div>
+                        <!--Nombre del Plan-->
+                        <div class="row my-3 py-2 datos justify-content-center">
+                            <h4 class="text-muted text-center text-decoration-underline">Plan</h4>
+                            <!--Descripción del plan-->
+                            <div class="col-4">
+                                <label for="descripcionPlan" class="form-label">Descripción</label>
+                                <input type="text" name="descripcionPlan" class="form-control"
+                                    placeholder="Ej: cohorte 2016" id="descripcionPlan">
+                            </div>
+                            <div class="col-3">
+                                <!--Fecha de Inicio-->
+                                <label for="plan_start_date" class="form-label">Fecha de Inicio</label>
+                                <input type="date" name="plan_start_date" class="form-control" id="plan_start_date">
+                            </div>
+                            <!--Fecha de Cierre-->
+                            <div class="col-3 mt-1">
+                                <label for="plan_end_date" class="form_label">Fecha de Fin</label>
+                                <input type="date" name="plan_end_date" class="form-control" id="plan_end_date">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--Toast-->
+        <!--Success-->
+        <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+            <div class="toast-header border-botomm border-light text-dark">
+                <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+                <strong class="me-auto">!Lo conseguimos!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                los datos se guardaron correctamente.
+            </div>
+        </div>
+        <!--Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3" id="footer"></footer>
+    </div>
+
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NuevaCarrera_editar.js"></script>
+</body>
+
+</html>

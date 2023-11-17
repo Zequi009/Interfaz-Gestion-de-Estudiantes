@@ -11,6 +11,7 @@
     <!--<link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">-->
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/SedeCarrera.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-    <!-- BARRA DE NAVEGACION -->
+    <!-- #region Barra de Navegacion-->
     <div class="container my-3">
 
         <header class="" id="navegacion"></header>
@@ -56,11 +57,12 @@
             </div>
         </div>
     </div>
+    <!-- #endregion -->
 
     <main class="container">
         <div class="row contenedor justify-content-center ">
             <div class=" col">
-                <form class=" form- floating formulario">
+                <form class=" formulario">
                     <!--Cuerpo de la Página-->
                     <div class="row datos my-2 py-2 d-flex justify-content-center">
                         <h4 class="text-center text-muted text-decoration-underline">Seleccionar la Sede y la Carrera
@@ -70,11 +72,14 @@
                             <!-- Seleccionar sede // Ver mas-->
                             <div class="input-group">
                                 <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modalSede">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
-                                        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
-                                      </svg>
+                                    data-bs-target="#modalSede">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-window" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                        <path
+                                            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+                                    </svg>
                                     Ver
                                 </a>
                                 <!--Select Sede-->
@@ -82,10 +87,12 @@
                             </div>
                             <!--BOTON NUEVA SEDE-->
                             <div class="col-auto d-flex justify-content-center">
-                                <a href="../Nueva carpeta/Nueva_Sede.html" class="text-decoration-none text-center my-1 h6 mx-1 w-50">
+                                <a href="../Nueva carpeta/Nueva_Sede.html"
+                                    class="text-decoration-none text-center my-1 h6 mx-1 w-50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                     </svg>
@@ -99,21 +106,27 @@
                             <div class="input-group">
                                 <!--Select Carrera-->
                                 <select name="carrera" id="selectCarrera" class="form-select"></select>
-                                
-                                <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal" data-bs-target="#modalCarrera">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window" viewBox="0 0 16 16">
-                                        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                                        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
-                                      </svg>
+
+                                <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalCarrera">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-window" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                        <path
+                                            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+                                    </svg>
                                     Ver
                                 </a>
                             </div>
                             <!--BOTON NUEVA CARRERA-->
                             <div class="col-auto d-flex justify-content-center">
-                                <a href="../Nueva carpeta/Nueva Carrera.html" class="text-decoration-none text-center my-1 h6 mx-1 w-50">
+                                <a href="../Nueva carpeta/Nueva Carrera.html"
+                                    class="text-decoration-none text-center my-1 h6 mx-1 w-50">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                     </svg>
@@ -137,7 +150,8 @@
                         <!--Codigo de Carrera-->
                         <div class="col-6 my-2 d-flex ">
                             <input type="text" id="InputCodigo" class="form-control" placeholder="Ej: EE024950">
-                            <label for="InputCodigo" class="form-label text-muted mx-1">Ingrese el Código de la Carrera</label>
+                            <label for="InputCodigo" class="form-label text-muted mx-1">Ingrese el Código de la
+                                Carrera</label>
                         </div>
                     </div>
                     <!--Botones-->
@@ -148,142 +162,186 @@
                             <button type="button" class="btn BtnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
-                    <!--Modal Editar Sede-->
-                    <div class="modal fade" id="modalSede" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!--Datos Generales-->
-                                    <h6 class="text-center text-decoration-underline">Datos Generales</h6>
-                                    <div class="row-auto border rounded py-1 px-1">
-                                        <div class="col">
-                                            <label for="" class="form-label">Descripcion de la Sede</label>
-                                            <input type="text" class="form-control" name="descripcion" id="descripcionSede" disabled>
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="" class="form-label">Telefono</label>
-                                            <input type="text" class="form-control"  name="telefono" id="telefonoSede" disabled>
-                                        </div>
-                                        <div class="col-auto">
-                                            <label for="" class="form-label">Correo Electrónico</label>
-                                            <input type="text" class="form-control" name="email" id="emailSede" disabled>
-                                        </div>
-                                    </div>
-                                    <!--Direccion-->
-                                    <h6 class="text-center text-decoration-underline">Dirección</h6>
-                                    <div class="row-auto border rounded mt-1 py-1 px-1 ">
-                                        <div class="col">
-                                            <label for="" class="form-label">Localidad</label>
-                                            <input type="text" name="localidad" id="localidadSede" class="form-control" disabled>
-                                        </div>
-                                        <div class="col-9">
-                                            <label for="" class="form-label">Barrio</label>
-                                            <input type="text" name="barrio" id="barrioSede" class="form-control" disabled>
-                                        </div>
-                                        <div class="col-9">
-                                            <label for="" class="form-label">Direccion</label>
-                                            <input type="text" name="direccion" id="direccionSede" class="form-control" disabled>
-                                        </div>
-                                        <div class="col-auto d-flex justify-content-between mt-3">
-                                            <label for="" class="form-label px-3">Piso</label>
-                                            <input type="text" name="piso" id="pisoSede" class="form-control" disabled>
-                                            <label for="" class="form-label px-3">Dpto</label>
-                                            <input type="text" name="depto" id="deptoSede" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <!--Dia y Hora-->
-                                    <h6 class="text-center text-decoration-underline">Día y Horario de Atención</h6>
-                                    <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-between">
-                                        <div class="col-3">
-                                            <label for="" class="form-label">De</label>
-                                            <input type="text" name="diaDe" id="diaDeSede" class="form-control" disabled>
-                                            <label for="" class="form-label">A</label>
-                                            <input type="text" name="diaA" id="diaASede" class="form-control" disabled>
-                                        </div>
-                                        <div class="col-3 ">
-                                            <label for="" class="form-label">Desde</label>
-                                            <input type="text" name="horaDesde" id="horaDesdeSede" class="form-control" disabled>
-                                            <label for="" class="form-label">Hasta</label>
-                                            <input type="text" name="horaHasta" id="horaHastaSede" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="text" class="btn btn-success">Editar
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Modal Editar Carrera-->
-                    <div class="modal fade" id="modalCarrera" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!--Datos Generales-->
-                                    <h6 class="text-center text-decoration-underline">Datos Generales</h6>
-                                    <div class="row-auto border rounded py-1 px-1">
-                                        <div class="col">
-                                            <label for="" class="form-label">Descripcion de la Carrera</label>
-                                            <input type="text" class="form-control" id="descripcionCarrera" name="descripcion" disabled>
-                                        </div>
-                                    </div>
-                                    <!--Plan de la Carrera-->
-                                    <h6 class="text-center text-decoration-underline">Plan de la Carrera</h6>
-                                    <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-center">
-                                        <div class="col-9">
-                                            <label for="" class="form-label">Plan de La carrera</label>
-                                            <input type="text" name="PlandelaCarrera" id="planCarrera" class="form-control" disabled>
-                                            <label for="" class="form-label">Fecha de inicio</label>
-                                            <input type="text" name="fechaInicio" id="fechaInicioCarrera" class="form-control" disabled>
-                                            <label for="" class="form-label">Fecha de Cierre</label>
-                                            <input type="text" name="fechaCierre" id="fechaCierreCarrera" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="text" class="btn btn-success">Editar
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </form>
 
             </div>
     </main>
+
+    <!-- #region ModalEditarCarrera-->
+    <div class="modal fade" id="modalCarrera" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Datos Generales-->
+                        <h6 class="text-center text-decoration-underline">Datos Generales</h6>
+                        <div class="row-auto border rounded py-1 px-1">
+                            <div class="col">
+                                <label for="" class="form-label">Descripcion de la Carrera</label>
+                                <input type="text" class="form-control" id="descripcionCarrera" name="descripcion"
+                                    disabled>
+                            </div>
+                        </div>
+                        <!--Plan de la Carrera-->
+                        <h6 class="text-center text-decoration-underline">Plan de la Carrera</h6>
+                        <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-center">
+                            <div class="col-9">
+                                <label for="" class="form-label">Plan de La carrera</label>
+                                <input type="text" name="PlandelaCarrera" id="planCarrera" class="form-control"
+                                    disabled>
+                                <label for="" class="form-label">Fecha de inicio</label>
+                                <input type="text" name="fechaInicio" id="fechaInicioCarrera" class="form-control"
+                                    disabled>
+                                <label for="" class="form-label">Fecha de Cierre</label>
+                                <input type="text" name="fechaCierre" id="fechaCierreCarrera" class="form-control"
+                                    disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn text-decoration-underline btn-success"
+                        data-bs-toggle="tooltip" data-bs-placement="top" title="editar" id="editarCarrera">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg>
+                    </button>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region ModalEditarSede-->
+    <div class="modal fade" id="modalSede" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEditar"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--header-->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMostrarLabel">Datos de la Carrera Seleccionada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Formulario-->
+                    <form action="" method="put" class="formulario" id="formularioSede">
+                        <!--boton editarSede-->
+                        <div class="row-3 d-flex justify-content-end">
+                            <div class="col-3 d-flex justify-content-end">
+                                <button type="button" class="btn text-decoration-underline btn-success"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="editar" id="editarSede">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!--Datos Generales-->
+                        <h6 class="text-center text-decoration-underline">Datos Generales</h6>
+                        <div class="row-auto border rounded py-1 px-1">
+                            <div class="col">
+                                <label for="" class="form-label">Descripcion de la Sede</label>
+                                <input type="text" class="form-control" name="descripcion" id="descripcionSede"
+                                    disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" name="telefono" id="telefonoSede" disabled>
+                            </div>
+                            <div class="col-auto">
+                                <label for="" class="form-label">Correo Electrónico</label>
+                                <input type="text" class="form-control" name="email" id="emailSede" disabled>
+                            </div>
+                        </div>
+                        <!--Direccion-->
+                        <h6 class="text-center text-decoration-underline">Dirección</h6>
+                        <div class="row-auto border rounded mt-1 py-1 px-1 ">
+                            <div class="col">
+                                <label for="" class="form-label">Localidad</label>
+                                <input type="text" name="localidad" id="localidadSede" class="form-control" disabled>
+                            </div>
+                            <div class="col-9">
+                                <label for="" class="form-label">Barrio</label>
+                                <input type="text" name="barrio" id="barrioSede" class="form-control" disabled>
+                            </div>
+                            <div class="col-9">
+                                <label for="" class="form-label">Direccion</label>
+                                <input type="text" name="direccion" id="direccionSede" class="form-control" disabled>
+                            </div>
+                            <div class="col-auto d-flex justify-content-between mt-3">
+                                <label for="" class="form-label px-3">Piso</label>
+                                <input type="text" name="piso" id="pisoSede" class="form-control" disabled>
+                                <label for="" class="form-label px-3">Dpto</label>
+                                <input type="text" name="depto" id="deptoSede" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <!--Dia y Hora-->
+                        <h6 class="text-center text-decoration-underline">Día y Horario de Atención</h6>
+                        <div class="row-auto border rounded mt-1 py-1 px-1 d-flex justify-content-evenly">
+                            <div class="col-6">
+                                <label for="diaDeSede" class="form-label">De:</label>
+                                <select class="form-select" name="diaDe" id="diaDeSede" disabled>
+                                    <option value="lunes">Lunes</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miercoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                </select>
+                                <label for="diaHasta" class="form-label">Hasta:</label>
+                                <select class="form-select" name="diaHasta" id="diaASede" disabled>
+                                    <option value="lunes">Lunes</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miercoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                </select>
+                            </div>
+                            <div class="col-3 ">
+                                <label for="" class="form-label">Desde</label>
+                                <input type="text" name="horaDesde" id="horaDesdeSede" class="form-control" disabled>
+                                <label for="" class="form-label">Hasta</label>
+                                <input type="text" name="horaHasta" id="horaHastaSede" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--footer-->
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary d-none" name="guardar"
+                        id="guardarSede">Guardar</button>
+                    <button type="button" class="btn btn-outline-danger d-none" name="cancelar"
+                        id="cancelarSede">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
     <!--Footer-->
     <div class="container">
         <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
 
-    <!--<script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="../Nueva carpeta/Css-Js/SedeCarrera.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
 </body>
 
 </html>
