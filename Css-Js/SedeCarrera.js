@@ -126,3 +126,11 @@ document.getElementById('editarCarrera').addEventListener('click', function() {
     // Redirigir a la página de edición con el ID como parámetro en la URL
     window.location.href = `../Nueva carpeta/NuevaCarrera_editar.html?id=${selectedId}`;
 });
+
+document.getElementById('editarSede').addEventListener('click', function() {
+    // Obtener el valor seleccionado del select (ID de la carrera)
+    const selectedId = document.getElementById('selectSede').value;
+    
+    // Redirigir a la página de edición con el ID como parámetro en la URL
+    window.location.href = `../Nueva carpeta/NuevaSede_editar.html?id=${selectedId}`;
+});
