@@ -1,9 +1,8 @@
 //Tooltips
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-// #region Carga las descripciones  en el selec y muestra todos los datos en el select
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl) })
+
+
 async function fetchCarreras() {
     try {
         const responseCarreras = await fetch('http://localhost:8000/API/CARRERAS/');
@@ -57,14 +56,22 @@ async function fetchSedes() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    //Muestra carga los datos a los select
-    fetchCarreras();
-    fetchSedes();
+document.getElementById('editarCarrera').addEventListener('click', function () {
+    // Obtener el valor seleccionado del select (ID de la carrera)
+    const selectedId = document.getElementById('selectCarrera').value;
 
-    document.getElementById('selectSede').addEventListener('change', mostrarDatosSede);
-    document.getElementById('selectCarrera').addEventListener('change', mostrarDatosCarrera);
+    // Redirigir a la página de edición con el ID como parámetro en la URL
+    window.location.href = `../Nueva carpeta/NuevaCarrera_editar.html?id=${selectedId}`;
 });
+
+document.getElementById('editarSede').addEventListener('click', function () {
+    // Obtener el valor seleccionado del select (ID de la carrera)
+    const selectedId = document.getElementById('selectSede').value;
+
+    // Redirigir a la página de edición con el ID como parámetro en la URL
+    window.location.href = `../Nueva carpeta/NuevaSede_editar.html?id=${selectedId}`;
+});
+
 async function mostrarDatosSede() {
     const sedeSeleccionada = document.getElementById('selectSede').value
     //logica para obtener los datos de la sede selccionada
@@ -117,20 +124,51 @@ async function mostrarDatosCarrera() {
         console.error('Error al obtener datos de la carrera', error);
     };
 }
-// #endregion
 
-document.getElementById('editarCarrera').addEventListener('click', function() {
-    // Obtener el valor seleccionado del select (ID de la carrera)
-    const selectedId = document.getElementById('selectCarrera').value;
-    
-    // Redirigir a la página de edición con el ID como parámetro en la URL
-    window.location.href = `../Nueva carpeta/NuevaCarrera_editar.html?id=${selectedId}`;
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-document.getElementById('editarSede').addEventListener('click', function() {
-    // Obtener el valor seleccionado del select (ID de la carrera)
-    const selectedId = document.getElementById('selectSede').value;
-    
-    // Redirigir a la página de edición con el ID como parámetro en la URL
-    window.location.href = `../Nueva carpeta/NuevaSede_editar.html?id=${selectedId}`;
+
+    //Muestra carga los datos a los select
+    fetchCarreras();
+    fetchSedes();
+
+    document.getElementById('selectSede').addEventListener('change', mostrarDatosSede);
+    document.getElementById('selectCarrera').addEventListener('change', mostrarDatosCarrera);
+
+    //ENVIAR POST A LA API
+    document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const selectSede = document.getElementById('selectSede').value;
+        const selectCarrera = document.getElementById('selectCarrera').value;
+        const selectTurno = document.getElementById('selectTurno').value;
+        const codigoCarrera = document.getElementById('InputCodigo').value
+
+        const formData = {
+            SEDE_ID: selectSede,
+            CARRERA_ID: selectCarrera,
+            TURNO: selectTurno,
+            CODIGO_CARRERA: codigoCarrera,
+        }
+        fetch('http://localhost:8000/API/SEDECARRERA/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al enviar el formulario a la Api')
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Respuesta de la Api', data)
+            })
+            .catch(error => {
+                console.error('Error', error.message);
+                console.error('Detalle del error', error.response);
+            })
+    });
 });
