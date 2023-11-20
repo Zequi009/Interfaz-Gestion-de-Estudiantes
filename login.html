@@ -20,7 +20,7 @@
             </div>
             <div class="col-6">
                 <!--Formulario-->
-                <form action="" method="post" class="formulario">
+                <form action="" method="post" class="formulario" onsubmit="logi(event)" id="formulario">
                     <!--cuadros de Usuario-->
                     <div class="form-floating mb-3">
                         <input type="text" name="user" id="usuario" class="form-control" placeholder="Ej: John Doe">
@@ -47,7 +47,8 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <!--Barra de Navegacion-->
+    <div class="container mt-5 d-none">
         <div class="row d-flex  justify-content-center">
             <div class="col-9">
                 <div class="progress" style="height: 20px;">
@@ -62,5 +63,6 @@
         </div>
     </div>
 <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+<script src="../Nueva carpeta/Css-Js/login.js"></script>
 </body>
 </html>

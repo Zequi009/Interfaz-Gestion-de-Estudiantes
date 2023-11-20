@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="formulario text-muted" method="post" id="formulario">
+        <!--Datos de la Materia-->
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion">
+
+        <label for="resolucion">Resolucion</label>
+        <input type="text" name="resolucion" id="resolucion">
+
+        <label for="año">año</label>
+        <input type="number" name="año" id="año">
+        <!--Botones-->
+                <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+
+                <button type="button" class="btn BtnCancelar mx-3">Cancelar</button>
+    </form>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+    const descripcion = document.getElementById('descripcion').value;
+    const resolucion = document.getElementById('resolucion').value;
+    const año = document.getElementById('año').value;
+
+    if (descripcion.length > 100) {
+        console.error('La descripción supera los 100 caracteres permitidos.');
+        return;
+    }
+
+    if (resolucion.length > 10) {
+        console.error('La resolución supera los 10 caracteres permitidos.');
+        return;
+    }
+
+    if (isNaN(año) || año <= 0) {
+        console.error('El año ingresado no es un número válido.');
+        return;
+    }
+
+    const formData = {
+        DESCRIPCION: descripcion,
+        COD_RESOLUCION: resolucion,
+        CARRERA_ANIO: año
+    }
+
+    // Realizar la solicitud POST utilizando fetch
+    fetch('http://localhost:8000/API/MATERIAS/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(error => {
+                throw new Error('Error al enviar el formulario a la API: ' + JSON.stringify(error));
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Respuesta de la API:', data);
+        // Aquí puedes realizar acciones con la respuesta de la API
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Mostrar más detalles sobre el error, si está disponible
+        if (error.message.includes('Error al enviar el formulario a la API')) {
+            const errorDetails = JSON.parse(error.message.replace('Error al enviar el formulario a la API: ', ''));
+            console.error('Detalles del error:', errorDetails);
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -164,11 +164,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(data => {
-                console.log('Respuesta de la Api', data)
+                console.log('Respuesta de la Api', data);
+                
+                const toastSuccess = document.getElementById('toastSuccess');
+                const toastSS = new bootstrap.Toast(toastSuccess);
+                toastSS.show();
             })
             .catch(error => {
                 console.error('Error', error.message);
                 console.error('Detalle del error', error.response);
+
+                const toastError = document.getElementById('toastError');
+                const bsToastError = new bootstrap.Toast(toastError);
+                bsToastError.show();
             })
     });
 });
