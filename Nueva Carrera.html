@@ -69,6 +69,13 @@
         <div class="row contenedor justify-content-center ">
             <div class="col-12 ">
                 <form action="" method="post" class="formulario text-muted " id="formulario">
+
+                    <!-- Contenedor para mostrar mensajes de error con estilos de Bootstrap -->
+                    <div id="error-message" class="alert alert-danger" role="alert"
+                        style="display: none; margin-top: 10px;">
+                        Los campos Descripción, Dirección, Barrio y Localidad son obligatorios
+                    </div>
+
                     <!--Datos Generales-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center">
                         <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
@@ -83,18 +90,20 @@
                             <h4 class="text-muted text-center text-decoration-underline">Plan</h4>
                             <!--Descripción del plan-->
                             <div class="col-4">
-                                <label for="descripcionPlan" class="form-label">Descripción</label>
+                                <label for="descripcionPlan" class="form-label text-decoration-underline">Plan</label>
                                 <input type="text" name="descripcionPlan" class="form-control"
                                     placeholder="Ej: cohorte 2016" id="descripcionPlan">
                             </div>
                             <div class="col-3">
                                 <!--Fecha de Inicio-->
-                                <label for="plan_start_date" class="form-label">Fecha de Inicio</label>
+                                <label for="plan_start_date" class="form-label text-decoration-underline">Fecha de
+                                    Inicio</label>
                                 <input type="date" name="plan_start_date" class="form-control" id="plan_start_date">
                             </div>
                             <!--Fecha de Cierre-->
                             <div class="col-3 mt-1">
-                                <label for="plan_end_date" class="form_label">Fecha de Fin</label>
+                                <label for="plan_end_date" class="form_label text-decoration-underline">Fecha de
+                                    Fin</label>
                                 <input type="date" name="plan_end_date" class="form-control" id="plan_end_date">
                             </div>
                         </div>
@@ -112,18 +121,18 @@
         </div>
     </main>
     <!--Toast-->
-        <!--Success-->
-        <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
-            <div class="toast-header border-botomm border-light text-dark">
-                <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
-                <strong class="me-auto">!Lo conseguimos!</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                los datos se guardaron correctamente.
-            </div>
+    <!--Success-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <!--Error-->
+        <div class="toast-body">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Error-->
     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
         <div class="toast-header border-botomm border-light text-dark">
             <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">

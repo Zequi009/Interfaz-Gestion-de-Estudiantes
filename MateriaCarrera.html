@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/MateriaCarrera.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+    <!-- #region Encabezado-->
     <div class="container my-3">
 
         <header class="" id="navegacion"></header>
@@ -51,16 +53,23 @@
             </div>
         </div>
     </div>
+    <!-- #endregion -->
     <main class="container">
-        <!--Formulario-->
+        <!-- #region Formulario-->
         <div class="row contenedor justify-content-center">
             <div class="col-12">
-                <form action="" method="post" class="formulario text-muted ">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
+                    <!--Mensaje de Error dinamico-->
+                    <div id="error-message" class="alert alert-danger" role="alert"
+                        style="display: none; margin-top: 10px;">
+                        Mensaje de error dinámico
+                    </div>
+
                     <!--seleccion Materia Carrera-->
                     <div class="row datos my-2 py-2 d-flex justify-content-center">
                         <h4 class="text-center text-muted text-decoration-underline">Seleccionar la Carrera y la Materia
                         </h4>
-                        <!--Carrera-->
+                        <!-- #region Carrera-->
                         <div class="col-6">
                             <!-- Seleccionar Carrera // Ver mas-->
                             <div class="input-group">
@@ -76,9 +85,8 @@
                                     </svg>
                                     Ver
                                 </a>
-                                <select name="" id="selectCarrera" class="form-select">
-                                    <option value="1">Elegir la Carrera</option>
-                                </select>
+                                <!--selectCarrera-->
+                                <select name="selectCarrera" id="selectCarrera" class="form-select"> </select>
                             </div>
                             <div class="col-auto d-flex justify-content-center">
                                 <a href="../Nueva carpeta/SedeCarrera.html"
@@ -90,18 +98,17 @@
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                     </svg>
-                                    agregar una nueva Carrera
+                                    agregar Carrera por primera vez
                                 </a>
                             </div>
                         </div>
-                        <!--Materia-->
+                        <!-- #endregion -->
+                        <!-- #region Materia-->
                         <div class="col-6 d-flex flex-column">
                             <!-- Seleccionar Materia // Ver mas-->
                             <div class="input-group">
                                 <!--Select Materia-->
-                                <select name="" id="selectMateria" class="form-select">
-                                    <option value="1">Elegir la Materia</option>
-                                </select>
+                                <select name="" id="selectMateria" class="form-select"></select>
                                 <!--Boton "ver"-->
                                 <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
                                     data-bs-target="#modalMateria">
@@ -126,17 +133,18 @@
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                     </svg>
-                                    agregar una nueva Materia
+                                    agregar Materia por primera vez
                                 </a>
                             </div>
                         </div>
+                        <!-- #endregion -->
                     </div>
-                    <!--Seleccion Profesor Preseptor-->
+                    <!-- #region Profesor/Preceptor-->
                     <div class="row datos my-2 py-2 d-flex justify-content-center">
                         <h4 class="text-center text-muted text-decoration-underline">Seleccionar el Docente y el
                             Preceptor
                         </h4>
-                        <!--Docente-->
+                        <!-- #region Docente-->
                         <div class="col-6">
                             <!-- Seleccionar Docente // Ver mas-->
                             <div class="input-group">
@@ -153,9 +161,7 @@
                                     Ver
                                 </a>
                                 <!--Select Docente-->
-                                <select name="" id="selectDocente" class="form-select">
-                                    <option value="1">Elegir el Docente</option>
-                                </select>
+                                <select name="" id="selectDocente" class="form-select"></select>
                             </div>
                             <!--Nuevo docente -->
                             <div class="col-auto d-flex justify-content-center">
@@ -168,18 +174,17 @@
                                         <path
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                                     </svg>
-                                    agregar un Nuevo Docente
+                                    agregar Docente por Primera vez
                                 </a>
                             </div>
                         </div>
-                        <!--Preceptor-->
+                        <!-- #endregion -->
+                        <!-- #region Preceptor-->
                         <div class="col-6 d-flex flex-column">
                             <!-- Seleccionar Preceptor// Ver mas-->
                             <div class="input-group">
-                                <!--Select Materia-->
-                                <select name="" id="selectPreceptor" class="form-select">
-                                    <option value="1">Elegir Preceptor</option>
-                                </select>
+                                <!--Select preceptor-->
+                                <select name="" id="selectPreceptor" class="form-select"></select>
                                 <!--Boton "ver"-->
                                 <a class=" btn btn-outline-success  mx-3 rounded" href="#" data-bs-toggle="modal"
                                     data-bs-target="#modalMostrar_preseptor">
@@ -208,102 +213,42 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- #endregion -->
                     </div>
-                    <!--Horarios-->
-                    <div class="row datos my-2 py-2 d-flex justify-content-center">
-                        <h4 class="text-center text-decoration-underline">Horarios</h4>
-                        <div class="col-3 my-1 d-flex align-self-center">
-                            <label for="" class="form-label">Hora Inicio</label>
-                            <input type="time" class="form-control ">
-                        </div>
-                        <div class="col-3 my-1 d-flex align-self-center">
-                            <label for="" class="form-label">Hora Fin</label>
-                            <input type="time" class="form-control ">
-                        </div>
-                        <div class="col-4 d-flex flex-column my-1 justify-content-center">
-                            <Select class="form-select">
-                                <option value="1">Seleccione un dia de la semana</option>
-                                <option value="1">Lunes</option>
-                                <option value="1">martes</option>
-                                <option value="1">miercoles</option>
-                                <option value="1">jueves</option>
-                                <option value="1">viernes</option>
-                            </Select>
-                        </div>
-                    </div>
-                    <!--Datos Generales-->
+                    <!-- #endregion -->
+                    <!-- #region Datos Generales-->
                     <div class="row datos my-2 py-2 d-flex justify-content-center">
                         <h4 class="text-center text-decoration-underline">Datos Generales</h4>
                         <div class="col-4 my-1 d-flex flex-column">
                             <label for="" class="form-label">Ciclo lectivo</label>
-                            <input type="text" class="form-control" placeholder="Ej: 2018">
+                            <input type="number" class="form-control" placeholder="Ej: 2018" name="cicloLectivo"
+                                id="inputCiclo">
                         </div>
                         <div class="col-2 d-flex my-1 justify-content-center flex-column">
                             <label for="" class="form-label">Curso</label>
-                            <input type="number" class="form-control" placeholder="Ej:1° Año">
+                            <input type="text" class="form-control" placeholder="Ej:1° Año" name="curso"
+                                id="inputCurso">
                         </div>
-                        <div class="col-4 d-flex flex-column my-1 justify-content-center">
-                            <label for="" class="form-label">Regularizable</label>
-                            <input type="text" class="form-control" placeholder="Ej:">
+                        <div class="col-4 d-flex flex-column mt-3 justify-content-center align-items-center">
+                            <div class="form-check form-switch">
+                                <label for="inputReg" class="form-check-label fs-6">la materia se puede promocionar</label>
+                                <input type="checkbox" class="form-check-input h6" placeholder="Ej:" name="" id="inputReg">
+                            </div>
                         </div>
                     </div>
+                    <!-- #endregion -->
 
-                    <!--Botones-->
+                    <!-- #region Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btnGuardar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Guardar</button>
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
 
-                            <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
-                                data-bs-target="#modalcancelar">Cancelar</button>
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
-                    <!--Modal Guardar-->
-                    <div class="modal fade Vmodal" id="staticBackdrop" data-bs-backdrop="static"
-                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Guardar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Esta a punto de guardar los datos escritos hasta ahora, no se olvide de revisar bien
-                                    todo ¿Desea Continuar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn  btn-primary">Si, deseo Continuar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Modal Cancelar-->
-                    <div class="modal fade Vmodal" id="modalcancelar" data-bs-keyboard="false" tabindex="-1"
-                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">¿Desea Cancelar?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Todos los datos escritos hasta ahora se perderan y sera redirigido a la ventana
-                                    princip, ¿Seguro que desea Cancelar?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn  btn-primary">Continuar editando</button>
-                                    <a href="../Nueva carpeta/Menu_Principal.html" type="button"
-                                        class="btn btn-danger">Si, deseo
-                                        Cancelar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- #endregion -->
                 </form>
-                <!--Modal Mostrar Carrera-->
+                <!-- #region Modal Mostrar/Editar Sede/Carrera-->
                 <div class="modal fade" id="modalCarrera" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="modal Ver" aria-hidden="true">
                     <div class="modal-dialog">
@@ -316,33 +261,46 @@
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Sede y Carrera</h6>
                                     <div class="col-6">
-                                        <label for="" class="form-label">Carrera</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="carrera" class="form-label">Carrera</label>
+                                        <input type="text" class="form-control" name="carrera" id="carrera" disabled>
                                     </div>
                                     <div class="col-6">
-                                        <label for="" class="form-label">Sede</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="sede" class="form-label">Sede</label>
+                                        <input type="text" class="form-control" name="sede" id="sede" disabled>
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Turno y Código de Carrera</h6>
                                     <div class="col-6">
-                                        <label for="" class="form-label">Turno</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="turno" class="form-label">Turno</label>
+                                        <input type="text" class="form-control" name="turno" id="turno" disabled>
                                     </div>
                                     <div class="col-6">
-                                        <label for="" class="form-label">Código</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="codigo" class="form-label">Código</label>
+                                        <input type="text" class="form-control" name="codigo" id="codigo" disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-success" name="editarSedeCarrera"
+                                    id="editarSedeCarrera">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+                                        </path>
+                                        <path fill-rule="evenodd"
+                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+
+                                        </path>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--Modal Mostrar/ Editar Materia-->
+                <!-- #endregion -->
+                <!-- #region Modal Mostrar/Editar Materia-->
                 <div class="modal fade" id="modalMateria" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="modal Ver" aria-hidden="true">
                     <div class="modal-dialog">
@@ -356,21 +314,22 @@
                                     <h6 class="text-center text-muted">Descripcion y Resolucion</h6>
                                     <div class="col-6">
                                         <label for="" class="form-label">Descripcion</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" id="descripcion" name="descripcion"
+                                            disabled>
                                     </div>
                                     <div class="col-6">
                                         <label for="" class="form-label">Resolucion</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" id="resolucion" name="resolucion"
+                                            disabled>
                                     </div>
                                     <div class="col-6 mt-3">
                                         <h6 class="text-center text-muted">Año</h6>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" id="año" name="año" disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="text" class="btn btn-success">Editar
+                                <button type="text" class="btn btn-success" id="editarMateria">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path
@@ -386,7 +345,8 @@
                         </div>
                     </div>
                 </div>
-                <!--Modal Mostrar/ Editar Profesor-->
+                <!-- #endregion -->
+                <!-- #region Modal Mostrar/Editar Profesor-->
                 <div class="modal fade" id="modalMostrar_profesor" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="modal Ver" aria-hidden="true">
                     <div class="modal-dialog">
@@ -399,37 +359,38 @@
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Datos Personales</h6>
                                     <div class="col-6">
-                                        <label for="" class="form-label text-muted">Nombre</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="nombre" class="form-label text-muted">Nombre</label>
+                                        <input type="text" class="form-control" name="nombre" id="nombre" disabled>
                                     </div>
                                     <div class="col-6">
-                                        <label for="" class="form-label text-muted">Apellido</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <label for="apellido" class="form-label text-muted">Apellido</label>
+                                        <input type="text" class="form-control" name="apellido" id="apellido" disabled>
                                     </div>
                                     <div class="col-4 mt-3">
                                         <h6 class="text-center text-muted">DNI</h6>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="number" class="form-control" name="dni" id="dni" disabled>
                                     </div>
                                     <div class="col-6 mt-3">
                                         <h6 class="text-center text-muted">Fecha de Nacimiento</h6>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" id="fechaNacimento"
+                                            name="fechaNacimiento" disabled>
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Contacto</h6>
                                     <div class="col-6">
                                         <label for="" class="text-muted form-label">Correo Electrónico</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="email" class="form-control" id="email" name="email" disabled>
                                     </div>
                                     <div class="col-6">
                                         <label for="" class="text-muted form-label">Teléfono</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="numero" class="form-control" id="telefono" name="telefono"
+                                            disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="text" class="btn btn-success">Editar
+                                <button type="text" class="btn btn-success" id="editarDocente">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path
@@ -445,7 +406,8 @@
                         </div>
                     </div>
                 </div>
-                <!--Modal Mostrar/ Editar Profesor-->
+                <!-- #endregion -->
+                <!-- #region Modal Mostrar/Editar Preceptor-->
                 <div class="modal fade" id="modalMostrar_preseptor" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="modal Ver" aria-hidden="true">
                     <div class="modal-dialog">
@@ -459,36 +421,38 @@
                                     <h6 class="text-center text-muted">Datos Personales</h6>
                                     <div class="col-6">
                                         <label for="" class="form-label text-muted">Nombre</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" name="nombre" id="nombrePre" disabled>
                                     </div>
                                     <div class="col-6">
                                         <label for="" class="form-label text-muted">Apellido</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="text" class="form-control" name="apellido" id="apellidoPre"
+                                            disabled>
                                     </div>
                                     <div class="col-4 mt-3">
                                         <h6 class="text-center text-muted">DNI</h6>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="number" class="form-control" name="dni" id="dniPre" disabled>
                                     </div>
                                     <div class="col-6 mt-3">
                                         <h6 class="text-center text-muted">Fecha de Nacimiento</h6>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="date" class="form-control" name="fechaNacimento"
+                                            id="fechaNacimentoPre" disabled>
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Contacto</h6>
                                     <div class="col-6">
                                         <label for="" class="text-muted form-label">Correo Electrónico</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="email" class="form-control" name="email" id="emailPre" disabled>
                                     </div>
                                     <div class="col-6">
                                         <label for="" class="text-muted form-label">Teléfono</label>
-                                        <input type="text" class="form-control" disabled>
+                                        <input type="number" class="form-control" name="telefono" id="telefonoPre"
+                                            disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="text" class="btn btn-success">Editar
+                                <button type="text" class="btn btn-success" name="editarPreceptor" id="editarPersonal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path
@@ -504,11 +468,41 @@
                         </div>
                     </div>
                 </div>
+                <!-- #endregion -->
             </div>
         </div>
+        <!-- #endregion -->
     </main>
+
+    <!-- #region Toast-->
+    <!--Toast Success-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Toast Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <!-- #endregion -->
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/MateriaCarrera.js"></script>
+    
 </body>
 
 </html>

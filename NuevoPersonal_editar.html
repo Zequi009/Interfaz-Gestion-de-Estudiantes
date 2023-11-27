@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,12 +42,21 @@
                                 Nueva Materia
                             </a>
                         </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo Preceptor
+                            </a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-circle-fill" viewBox="0 0 16 16">
                                 <circle cx="8" cy="8" r="8" />
                             </svg>
-                            Nuevo Preceptor
+                            editar
                         </li>
                     </ol>
                 </nav>
@@ -57,7 +67,7 @@
     <main class="container">
         <div class="row contenedor justify-content-center ">
             <div class=" col">
-                <form method="post" class="formulario text-muted" id="formulario">
+                <form method="put" class="formulario text-muted" id="formulario">
 
                     <!-- Contenedor para mostrar mensajes de error con estilos de Bootstrap -->
                     <div id="error-message" class="alert alert-danger" role="alert"
@@ -117,9 +127,9 @@
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="submit" class="btn BtnGuardar mx-3">Guardar</button>
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
 
-                            <button type="button" class="btn BtnCancelar mx-3">Cancelar</button>
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
                 </form>
@@ -155,7 +165,7 @@
     </div>
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
-    <script src="../Nueva carpeta/Css-Js/NuevoPersonal.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NuevoPersonal_editar.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>

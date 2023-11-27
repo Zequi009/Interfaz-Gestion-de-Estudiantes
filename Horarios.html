@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/MateriaCarrera.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Horarios</title>
+</head>
+
+<body>
+    <!-- #region Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nueva Materia
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Horario
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+    <main class="container">
+        <!-- #region Formulario-->
+        <div class="row contenedor justify-content-center">
+            <div class="col-12">
+                <form action="post" method="post" class="formulario text-muted ">
+
+                    <!-- #region region horarios-->
+                    <div class="row datos my-2 py-2 d-flex justify-content-center">
+                        <h4 class="text-center text-decoration-underline">Horarios</h4>
+                        <div class="col-3 my-1 d-flex align-self-center">
+                            <label for="" class="form-label">Hora Inicio</label>
+                            <input type="time" class="form-control" name="horaInicio" id="horaInicio">
+                        </div>
+                        <div class="col-3 my-1 d-flex align-self-center">
+                            <label for="" class="form-label">Hora Fin</label>
+                            <input type="time" class="form-control " name="horaFin" id="horaFin">
+                        </div>
+                        <div class="col-4 d-flex flex-column my-1 justify-content-center">
+                            <Select class="form-select" name="diaSemana" id="selectTurno">
+                                <option value="">Seleccione un dia de la semana</option>
+                                <option value="lunes">Lunes</option>
+                                <option value="martes">martes</option>
+                                <option value="miercoles">miercoles</option>
+                                <option value="jueves">jueves</option>
+                                <option value="viernes">viernes</option>
+                            </Select>
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+                     <!-- #region Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+                </form>
+            </div>
+        </div>
+        <!-- #endregion -->
+    </main>
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/Horarios.js"></script>
+</body>
+
+</html>

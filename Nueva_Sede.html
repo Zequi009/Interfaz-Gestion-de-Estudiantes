@@ -70,6 +70,13 @@
             <div class="col-12 ">
                 <!--Formulario-->
                 <form method="post" class="formulario text-muted " id="formulario">
+
+                    <!-- Contenedor para mostrar mensajes de error con estilos de Bootstrap -->
+                    <div id="error-message" class="alert alert-danger" role="alert"
+                        style="display: none; margin-top: 10px;">
+                        Los campos Descripción, Dirección, Barrio y Localidad son obligatorios
+                    </div>
+
                     <!--datos-->
                     <div class="row my-3 py-3 datos d-flex justify-content-center">
                         <h4 class="text-muted text-decoration-underline text-center">Datos generales </h4>
@@ -204,7 +211,7 @@
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="../Nueva carpeta/Css-Js/NuevaSede.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    
+
 </body>
 
 </html>

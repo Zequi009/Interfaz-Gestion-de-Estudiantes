@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevoPersonal.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Nuevo Docente</title>
 </head>
+
 <body>
     <!--Encabezado-->
     <div class="container my-3">
@@ -63,7 +66,14 @@
     <main class="container">
         <div class="row contenedor justify-content-center ">
             <div class=" col">
-                <form  method="post" class="formulario text-muted" id="formulario">
+                <form method="post" class="formulario text-muted" id="formulario">
+
+                    <!-- Contenedor para mostrar mensajes de error con estilos de Bootstrap -->
+                    <div id="error-message" class="alert alert-danger" role="alert"
+                        style="display: none; margin-top: 10px;">
+                        Los campos Descripción, Dirección, Barrio y Localidad son obligatorios
+                    </div>
+
                     <!-- FILA Datos Personales-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center">
                         <h4 class="text-center text-muted text-decoration-underline">Datos Generales</h4>
@@ -94,18 +104,20 @@
                         <!--Correo Electrónico-->
                         <div class="col-6 my-3">
                             <label for="" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" placeholder="Ej: JohnDoe@hotmail.com" name="email" id="email">
+                            <input type="email" class="form-control" placeholder="Ej: JohnDoe@hotmail.com" name="email"
+                                id="email">
                         </div>
                         <!--Telefono-->
                         <div class="col-4 my-3">
                             <label for="" class="form-label">teléfono</label>
-                            <input type="text" class="form-control" placeholder="Ej: 0351-412345" name="telefono" id="telefono">
+                            <input type="text" class="form-control" placeholder="Ej: 0351-412345" name="telefono"
+                                id="telefono">
                         </div>
                     </div>
                     <!--FILA Extras-->
                     <div class="row my-2 datos d-flex justify-content-center">
                         <h4 class="text-center text-decoration-underline text-muted">Contraseña</h4>
-                        <div class="col-6 d-flex justify-content-center my-3"> 
+                        <div class="col-6 d-flex justify-content-center my-3">
                             <label for="" class="form-label">Contraseña del usuario</label>
                             <input type="password" name="contraseña" id="contraseña" class="form-control">
                         </div>
@@ -154,4 +166,5 @@
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
+
 </html>

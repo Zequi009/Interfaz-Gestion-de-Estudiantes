@@ -10,6 +10,21 @@ document.getElementById('formulario').addEventListener('submit', function (event
     const telefono = document.getElementById('telefono').value;
     const password = document.getElementById('contraseña').value;
 
+    if(nombre===''|| apellido===''|| dni===''|| password==='')
+    {
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = 'Los Campos nombre, apellido, dni, y contraseña son obligatorios'
+        errorMessage.style.display='block'; //Mostrar el mensaje de Error
+
+        // Mostrar toast de error
+        const toastError = document.getElementById('toastError');
+        const terror = new bootstrap.Toast(toastError);
+        terror.show();
+
+        return;
+
+    }
+
     const formData = {
         NOMBRE: nombre,
         APELLIDO: apellido,

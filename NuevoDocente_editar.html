@@ -1,8 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <title>Nuevo Personal</title>
+    <title>Nuevo Docente/Editar</title>
 </head>
 
 <body>
@@ -38,7 +38,25 @@
                                     class="bi bi-circle-fill" viewBox="0 0 16 16">
                                     <circle cx="8" cy="8" r="8" />
                                 </svg>
-                                Nueva Materia
+                                nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                nueva materia
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                nuevo profesor
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
@@ -46,7 +64,7 @@
                                 class="bi bi-circle-fill" viewBox="0 0 16 16">
                                 <circle cx="8" cy="8" r="8" />
                             </svg>
-                            Nuevo Preceptor
+                            Editar
                         </li>
                     </ol>
                 </nav>
@@ -57,14 +75,13 @@
     <main class="container">
         <div class="row contenedor justify-content-center ">
             <div class=" col">
-                <form method="post" class="formulario text-muted" id="formulario">
+                <form method="put" class="formulario text-muted" id="formulario">
 
                     <!-- Contenedor para mostrar mensajes de error con estilos de Bootstrap -->
                     <div id="error-message" class="alert alert-danger" role="alert"
                         style="display: none; margin-top: 10px;">
-                        Los campos Nombre, Apellido, Dni, Teléfono y Localidad son obligatorios
+                        Los campos Descripción, Dirección, Barrio y Localidad son obligatorios
                     </div>
-
 
                     <!-- FILA Datos Personales-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center">
@@ -76,13 +93,13 @@
                         </div>
                         <!--Apellido-->
                         <div class="col-5">
-                            <label for="" class="form-label">apellido</label>
-                            <input type="text" class="form-control" placeholder="Ej: Doe" name="apellido" id="apellido">
+                            <label for="apellido" class="form-label">apellido</label>
+                            <input type="text" class="form-control" class="Ej: Doe" name="apellido" id="apellido">
                         </div>
                         <!--fecha de Nacimiento-->
                         <div class="col-3    my-3">
                             <label for="" class="form-label">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control" name="Fnacimineto" id="Fnacimiento">
+                            <input type="date" class="form-control" name="Fnacimiento" id="Fnacimiento">
                         </div>
                         <!--DNI-->
                         <div class="col-3 my-3">
@@ -102,7 +119,7 @@
                         <!--Telefono-->
                         <div class="col-4 my-3">
                             <label for="" class="form-label">teléfono</label>
-                            <input type="number" class="form-control" placeholder="Ej: 0351-412345" name="telefono"
+                            <input type="text" class="form-control" placeholder="Ej: 0351-412345" name="telefono"
                                 id="telefono">
                         </div>
                     </div>
@@ -111,34 +128,33 @@
                         <h4 class="text-center text-decoration-underline text-muted">Contraseña</h4>
                         <div class="col-6 d-flex justify-content-center my-3">
                             <label for="" class="form-label">Contraseña del usuario</label>
-                            <input type="password" class="form-control" name="contraseña" id="contraseña">
+                            <input type="password" name="contraseña" id="contraseña" class="form-control">
                         </div>
                     </div>
                     <!--Botones-->
                     <div class="row justify-content-center py-3 barraBotones">
                         <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="submit" class="btn BtnGuardar mx-3">Guardar</button>
+                            <button type="submit" class="btn btnGuardar mx-3" id="btnGuardar">Guardar</button>
 
-                            <button type="button" class="btn BtnCancelar mx-3">Cancelar</button>
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </main>
-    <!--Toast-->
-    <!--Success-->
+    <!--Toast Suuccess-->
     <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
         <div class="toast-header border-botomm border-light text-dark">
-            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
             <strong class="me-auto">!Lo conseguimos!</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
             los datos se guardaron correctamente.
         </div>
     </div>
-    <!--Error-->
+    <!--Toast Error-->
     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
         <div class="toast-header border-botomm border-light text-dark">
             <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
@@ -149,13 +165,13 @@
             Error al Guardar los Datos
         </div>
     </div>
-    <!--Footer-->
+    <!--FOOTER-->
     <div class="container">
-        <footer class="footer mt-5 mb-3" id="footer"></footer>
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
-    <script src="../Nueva carpeta/Css-Js/NuevoPersonal.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NUevoDoncente_editar.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
