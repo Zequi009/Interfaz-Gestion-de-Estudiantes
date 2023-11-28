@@ -66,7 +66,7 @@
         <!-- #region Formulario-->
         <div class="row contenedor justify-content-center">
             <div class="col-12">
-                <form action="post" method="post" class="formulario text-muted ">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
 
                     <!-- #region region horarios-->
                     <div class="row datos my-2 py-2 d-flex justify-content-center">
@@ -80,7 +80,7 @@
                             <input type="time" class="form-control " name="horaFin" id="horaFin">
                         </div>
                         <div class="col-4 d-flex flex-column my-1 justify-content-center">
-                            <Select class="form-select" name="diaSemana" id="selectTurno">
+                            <Select class="form-select" name="diaSemana" id="selectDia">
                                 <option value="">Seleccione un dia de la semana</option>
                                 <option value="lunes">Lunes</option>
                                 <option value="martes">martes</option>
@@ -105,6 +105,11 @@
         </div>
         <!-- #endregion -->
     </main>
+
+    <div class="container">
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
+    </div>
+
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
