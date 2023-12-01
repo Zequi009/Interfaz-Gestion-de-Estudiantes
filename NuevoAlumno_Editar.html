@@ -1,0 +1,262 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/NuevoAlumno.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+    <title>Nuevo Alumno</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Institucionales
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inscripciones
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Nuevo Alumno
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--Cuerpo-->
+    <main class="container">
+        <!--Formulario-->
+        <div class="row contenedor justify-content-center ">
+            <div class="col-12 ">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
+                        <!--Mensaje de Error dinamico-->
+                        <div id="error-message" class="alert alert-danger" role="alert"
+                            style="display: none; margin-top: 10px;">
+                            Mensaje de error dinámico
+                        </div>
+                        <!--datos personales-->
+                        <div class="row my-2 py-2 datos d-flex justify-content-center">
+                            <h4 class="text-muted text-decoration-underline text-center">Datos Personales </h4>
+                            <!--Nombre-->
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="nombre" id="nombre" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" nombre completo del alumno, si no tiene dejelo en blanco">
+                                    <label for="sedeID">Nombre</label>
+                                </div>
+                            </div>
+                            <!--Apellido-->
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="apellido" id="apellido" class="form-control"
+                                        placeholder="Ej: Doe" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" apellido del alumno">
+                                    <label for="apellido">Apellido</label>
+                                </div>
+                            </div>
+                            <!--DNI-->
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="documento" id="dni" class="form-control"
+                                        placeholder="Ej:12345678" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" documento del alumno, no debe ser separado por puntos">
+                                    <label for="documento">DNI</label>
+                                </div>
+                            </div>
+                            <!--Fecha de Nacimiento-->
+                            <div class="col-4">
+                                <div class="form-floating mb-3">
+                                    <input type="date" name="fecha de nacimiento" id="Fnacimiento" class="form-control"
+                                        placeholder="Ej:10/12/52" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" fecha de nacimiento del alumno">
+                                    <label for="fecha de nacimiento">Fecha de Nacimiento</label>
+                                </div>
+                            </div>
+                            <!--Telefono-->
+                            <div class="col-4">
+                                <div class="form-floating mb-6">
+                                    <input type="text" name="telefono" id="telefono" class="form-control"
+                                        placeholder="Ej:john Doe" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" telefono del alumno">
+                                    <label for="telefono">Teléfono</label>
+                                </div>
+                            </div>
+                            <!--Correo-->
+                            <div class="col-9">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="correo" id="correo" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" correo del alumno, si no tiene dejelo en blanco">
+                                    <label for="correo">Correo Electronico</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Direccion-->
+                        <div class="row my-3 py-2 datos  justify-content-between">
+                            <h4 class="text-muted text-center text-decoration-underline">Dirección</h4>
+                            <div class="col-6">
+                                <!--Localidad-->
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="localidad" id="localidad" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" localidad del alumno, si no tiene dejarlo en blanco">
+                                    <label for="localidad">Localidad</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <!--Barrio-->
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="Barrio" id="barrio" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" barrio del alumno, si no tiene dejarlo en blanco">
+                                    <label for="barrio">Barrio</label>
+                                </div>
+                            </div>
+                            <!--Calle-->
+                            <div class="col-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="calle" id="direccion" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" calle del alumno, si no tiene dejarlo en blanco">
+                                    <label for="calle">Direccion</label>
+                                </div>
+                            </div>
+                            <!--piso-->
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="piso" id="piso" class="form-control" placeholder="Ej:john "
+                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title=" piso del depertamento del alumno, si no tiene dejarlo en blanco">
+                                    <label for="piso">Piso</label>
+                                </div>
+                            </div>
+                            <!--Dpto-->
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="dpto" id="depto" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="depertamento del alumno, si no tiene dejarlo en blanco">
+                                    <label for="dpto">Depto.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Contacto de emergencia-->
+                        <div class="row my-2 py-2 datos justify-content-center">
+                            <h4 class="text-muted text-decoration-underline text-center">Contacto de Emergencia</h4>
+                            <!--Nombre-Emergencia-->
+                            <div class="col-4">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="emergencia" id="emergencia" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Nombre Completo del contacto de emergencia del alumno, si no tiene dejelo en blanco">
+                                    <label for="emergencia">Nombre</label>
+                                </div>
+                            </div>
+                            <!--Telefono-Emergencia-->
+                            <div class="col-4">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="telefono" id="telefonoEmerg" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="telefono( con codigo de area) del contacto de emergencia, si no tiene dejelo en blanco">
+                                    <label for="telefono">Telefono</label>
+                                    <div id="telefono-error"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--COntraseña-->
+                        <div class="row my-3 py-2 datos justify-content-center">
+                            <h4 class="text-muted text-decoration-underline text-center">Contraseña</h4>
+                            <div class="col-4">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="contraseña" id="contraseña" class="form-control"
+                                        placeholder="Ej:john " data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Es la contraseña que tendra el alumno para acceder a la aplicacion, por defecto es el DNI">
+                                    <label for="contraseña">contraseña</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Botones-->
+                        <div class="row justify-content-center py-3 barraBotones">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+
+                                <button type="button" class="btn btnCancelar mx-3" data-bs-toggle="modal"
+                                    data-bs-target="#modalcancelar">Cancelar</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!--Pie de Página-->
+    <div class="container">
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
+    </div>
+    <!--Toast Suuccess-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Toast Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/NuevoAlumno_editar.js"></script>
+</body>
+
+</html>
