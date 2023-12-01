@@ -18,6 +18,22 @@
     -moz-box-shadow: 15px 20px 6px -4px rgba(196,179,179,1);
     /* Resto de estilos para el toast */
 }
+.T-Delete{
+    
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 15px 20px 6px -4px rgba(196,179,179,1);
+    -webkit-box-shadow: 15px 20px 6px -4px rgba(196,179,179,1);
+    -moz-box-shadow: 15px 20px 6px -4px rgba(196,179,179,1);
+    /* Resto de estilos para el toast */
+}
+.T-Delete .toast-header{
+    background: #f78cf58e;
+}
+.T-Delete .toast-body{
+    background: #f78cf5;
+}
  .T-success .toast-header{
     background: #a3f78cc6;
 }
@@ -45,11 +61,21 @@
  <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
     <div class="toast-header border-botomm border-light text-dark">
       <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
-      <strong class="me-auto">!Lo conseguimos!</strong>
+      <strong class="me-auto">!Seguro me Extrañarás!</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      los datos se guardaron correctamente.
+      los datos se eliminaron correctamente
+    </div>
+ </div>
+ <div class="toast T-Delete my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastDelete">
+    <div class="toast-header border-botomm border-light text-dark">
+      <img src="../Nueva carpeta/Imagenes/FlorkTriste.png" class="rounded me-2" alt="Flork-Success">
+      <strong class="me-auto">!Seguro me Extrañarás!</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      los datos se eliminaron correctamente
     </div>
  </div>
 
@@ -68,6 +94,7 @@
  <button type="button" class="btn btn-primary" onclick="showToast()">Show Success</button>
  
  <button type="button" class="btn btn-primary" onclick="showToast2()">Show Error</button>
+ <button type="button" class="btn btn-primary" onclick="showToast3()">Show Delete</button>
 
  <script>
     function showToast() {
@@ -83,7 +110,13 @@
     var toast = new bootstrap.Toast(toastEl);
     toast.show();
 }
-
+ </script>
+ <script>
+    function showToast3() {
+      var toastEl = document.getElementsByClassName("T-Delete")[0];
+      var toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
  </script>
 </body>
 </html>

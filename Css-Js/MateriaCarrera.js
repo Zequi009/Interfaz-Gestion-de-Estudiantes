@@ -326,6 +326,7 @@ document.getElementById('editarPersonal').addEventListener('click', () => {
 });
 //#endregion
 
+// #region Evento POST
 const formulario = document.getElementById('formulario');
 const errorMessage = document.getElementById('error-message')
 
@@ -424,7 +425,7 @@ formulario.addEventListener('submit', function (event) {
 
             const toastSuccess = document.getElementById('toastSuccess');
             const toastSS = new bootstrap.Toast(toastSuccess);
-            toastSS.show();
+            toastSS.show(); 
 
             setTimeout(() => {
                 window.location.href = `../Nueva carpeta/Horarios.html?SEDECARRERA_ID=${nuevaSedeCarreraID}`
@@ -439,3 +440,4 @@ formulario.addEventListener('submit', function (event) {
         });
 
 });
+// #endregion
