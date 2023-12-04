@@ -1,18 +1,15 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
-    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/ListadoMaterias.css">
-    <title>Listado de Materias</title>
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/ListadoCarreras.css">
+    <title>listado de Sedes</title>
 </head>
-
 <body>
-    <!-- #region Encabezados-->
+    <!--Header-->
     <div class="container my-3">
 
         <header class="" id="navegacion"></header>
@@ -35,7 +32,7 @@
                                     class="bi bi-circle-fill" viewBox="0 0 16 16">
                                     <circle cx="8" cy="8" r="8" />
                                 </svg>
-                                Ver Más
+                                Ver  Más
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
@@ -43,15 +40,14 @@
                                 class="bi bi-circle-fill" viewBox="0 0 16 16">
                                 <circle cx="8" cy="8" r="8" />
                             </svg>
-                            Listado de Materias
+                            Listado de Carreras
                         </li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
-    <!-- #endregion -->
-    <!--Cuerpo-->
+    <!--aCuerpo de la página-->
     <main class="container">
         <!--Formulario-->
         <div class="row contenedor justify-content-center">
@@ -63,9 +59,9 @@
                         <!--Buscar por Carrera-->
                         <div class="col-6 d-flex">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="buscar por descripcion" name="inputBuscar" id="inputBuscar">
+                                <input type="text" class="form-control" placeholder="nombre de la Carrera" id="inputBuscar">
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-primary btnBuscar" id="btnBuscar"> Buscar</button>
+                                    <button type="submit" class="btn btn-primary BtnBuscar"> Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -73,43 +69,39 @@
                 </form>
             </div>
         </div>
-        <!--tabla de Datos-->
+        <!--Tabla de Datos-->
         <div class="row contenedor justify-content-center">
             <table class="table table-striped datos">
                 <!--Encabezado-->
                 <thead>
                     <tr>
-                        <tr>
-                            <th scope="col">#</th>
-                            <!--1-->
-                            <th scope="col">id</th>
-                            <!--2-->
-                            <th scope="col">Descricpion</th>
-                            <!--3-->
-                            <th scope="col">Resolucion</th>
-                            <!--3.1-->
-                            <th scope="col">Año</th>
-                            <!--4-->
-                            <th scope="col">Eliminar</th>
-                            
-                        </tr>
+                        <th scope="col">#</th> <!--1-->
+                        <th scope="col">id</th><!--2-->
+                        <th scope="col">Descripcion</th><!--3-->
+                        <th scope="col">Telefono</th><!--4-->
+                        <th scope="col">Email</th>
+                        <th scope="col">Localidad</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Hora Desde</th>
+                        <th scope="col">Hora Hasta</th>
+                        <th scope="col">Dia Desde</th>
+                        <th scope="col">Dia Hasta</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <!--Columnas-->
-
-                <tbody id="tabla-materias"></tbody>
+                <tbody id="tabla-sedes"></tbody>
             </table>
         </div>
-
     </main>
-    <!--Pie de Página-->
+    <!--Footer-->
     <div class="container">
-        <footer class="footer mt-5" id="footer"></footer>
+        <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
-    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
-    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
-    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
-    <script src="../Nueva carpeta/Css-Js/LIstadoMAteiras.js""></script>
-</body>
 
+ <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+ <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+ <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+ <script src="../Nueva carpeta/Css-Js/ListadoSedes.js"></script>
+</body>
 </html>
