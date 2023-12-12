@@ -335,23 +335,23 @@ formulario.addEventListener('submit', function (event) {
 
     const checkbox = document.getElementById('inputReg');
 
-    checkbox.addEventListener('change', function() {
+    checkbox.addEventListener('change', function () {
         const valor = this.checked ? 1 : 0;
         console.log('Valor:', valor);
     });
-    
+
     //capturar valores de los campos del formulario 
     const carrera = document.getElementById('selectCarrera').value;
     const materia = document.getElementById('selectMateria').value;
     const docente = document.getElementById('selectDocente').value;
     const preceptor = document.getElementById('selectPreceptor').value;
     const curso = document.getElementById('inputCurso').value;
-    const cicloLectivo = document.getElementById('inputCiclo').value; 
+    const cicloLectivo = document.getElementById('inputCiclo').value;
 
     //validar envio de chebox sin cambio
 
-    const checkRegu= document.getElementById('inputReg');
-    const regularidad = checkRegu.checked? 1:0 ;
+    const checkRegu = document.getElementById('inputReg');
+    const regularidad = checkRegu.checked ? 1 : 0;
 
     // Validar que la regularidad y el ciclo lectivo sean valores numéricos
     if (isNaN(cicloLectivo)) {
@@ -366,9 +366,9 @@ formulario.addEventListener('submit', function (event) {
     }
 
     //validar que los select no esten vacios
-    if(carrera=== ''|| materia=== ''){
-        errorMessage.textContent='No ha seleccionado ninguna Sede y Carrera.';
-        errorMessage.style.display='block';
+    if (carrera === '' || materia === '') {
+        errorMessage.textContent = 'No ha seleccionado ninguna Sede y Carrera.';
+        errorMessage.style.display = 'block';
         // Mostrar el Toast de error o realizar alguna otra acción
         const toastError = document.getElementById('toastError');
         const bsToastError = new bootstrap.Toast(toastError);
@@ -378,9 +378,9 @@ formulario.addEventListener('submit', function (event) {
 
     //validar que el ciclo lectivo no este vacio
 
-    if(cicloLectivo===''){
+    if (cicloLectivo === '') {
         errorMessage.textContent = 'No ha ingresado el Ciclo Lectivo';
-        errorMessage.style.display='block';
+        errorMessage.style.display = 'block';
         // Mostrar el Toast de error o realizar alguna otra acción
         const toastError = document.getElementById('toastError');
         const bsToastError = new bootstrap.Toast(toastError);
@@ -392,10 +392,10 @@ formulario.addEventListener('submit', function (event) {
     errorMessage.style.display = 'none';
 
     const datos = {
-        CARRERA_ID: carrera,
+        SEDECARRERA_ID: carrera,
         MATERIA_ID: materia,
-        DOCENTE_ID: docente||null,
-        PRECEPTOR_ID: preceptor||null,
+        DOCENTE_ID: docente || null,
+        PRECEPTOR_ID: preceptor || null,
         CURSO: curso,
         REGULARIZABLE: regularidad,
         CICLO_LECTIVO: cicloLectivo
@@ -419,19 +419,21 @@ formulario.addEventListener('submit', function (event) {
         })
         .then(data => {
             console.log('Datos guardados con exito', data);
+            if (data && 'MATERIACARRERA_ID' in data) {
+                const nuevaMateriaCarreraID = data.MATERIACARRERA_ID;
+                console.log('ID de la nueva materia carrera:', nuevaMateriaCarreraID);
 
-            //redireccionar a Horarios
-            const nuevaSedeCarreraID = data.id;
 
-            const toastSuccess = document.getElementById('toastSuccess');
-            const toastSS = new bootstrap.Toast(toastSuccess);
-            toastSS.show(); 
+                setTimeout(() => {
+                    window.location.href = `../Nueva carpeta/Horarios.html?SEDECARRERA_ID=${nuevaMateriaCarreraID}`;
+                }, 2000); // Cambia el valor de tiempo de espera si es necesario
+            }
 
-            setTimeout(() => {
-                window.location.href = `../Nueva carpeta/Horarios.html?SEDECARRERA_ID=${nuevaSedeCarreraID}`
-            }, 3000);
+            else {
+                console.error('La propiedad MATERIACARRERA_ID no está presente en los datos recibidos.');
+            }
         })
-        .catch(error => {   
+        .catch(error => {
             console.error('Error al enviar datos a la Api', error.message);
             // Mostrar el Toast de error o realizar alguna otra acción
             const toastError = document.getElementById('toastError');

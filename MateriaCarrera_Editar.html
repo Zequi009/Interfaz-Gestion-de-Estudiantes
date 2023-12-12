@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/bootstrap.min.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/MateriaCarrera.css">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- #region Encabezado-->
+    <div class="container my-3">
+
+        <header class="" id="navegacion"></header>
+        <div class="row mt-2">
+            <div class="col-auto">
+                <nav class="migas mt-3" aria-label="camino">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="B2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                                Nuevo
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                            Nueva Materia
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+    <main class="container">
+        <!-- #region Formulario-->
+        <div class="row contenedor justify-content-center">
+            <div class="col-12">
+                <form action="" method="post" class="formulario text-muted " id="formulario">
+                    <!--Mensaje de Error dinamico-->
+                    <div id="error-message" class="alert alert-danger" role="alert"
+                        style="display: none; margin-top: 10px;">
+                        Mensaje de error dinámico
+                    </div>
+                    <!--seleccion Materia Carrera-->
+                    <div class="row datos my-2 py-2 d-flex justify-content-center">
+                        <h4 class="text-center text-muted text-decoration-underline">Seleccionar la Carrera y la Materia
+                        </h4>
+                        <!-- #region Carrera-->
+                        <div class="col-6">
+                            <!-- Seleccionar Carrera // Ver mas-->
+                            <div class="input-group">   
+                                <!--selectCarrera-->
+                                <select name="selectCarrera" id="selectCarrera" class="form-select"> </select>
+                            </div>
+                        </div>
+                        <!-- #endregion -->
+                        <!-- #region Materia-->
+                        <div class="col-6 d-flex flex-column">
+                            <!-- Seleccionar Materia // Ver mas-->
+                            <div class="input-group">
+                                <!--Select Materia-->
+                                <select name="" id="selectMateria" class="form-select"></select>
+                            </div>
+                        </div>
+                        <!-- #endregion -->
+                    </div>
+                    <!-- #region Profesor/Preceptor-->
+                    <div class="row datos my-2 py-2 d-flex justify-content-center">
+                        <h4 class="text-center text-muted text-decoration-underline">Seleccionar el Docente y el
+                            Preceptor
+                        </h4>
+                        <!-- #region Docente-->
+                        <div class="col-6">
+                            <!-- Seleccionar Docente // Ver mas-->
+                            <div class="input-group">
+                                <!--Select Docente-->
+                                <select name="" id="selectDocente" class="form-select"></select>
+                            </div>
+                        </div>
+                        <!-- #endregion -->
+                        <!-- #region Preceptor-->
+                        <div class="col-6 d-flex flex-column">
+                            <!-- Seleccionar Preceptor// Ver mas-->
+                            <div class="input-group">
+                                <!--Select preceptor-->
+                                <select name="" id="selectPreceptor" class="form-select"></select>
+                            </div>
+                        </div>
+                        <!-- #endregion -->
+                    </div>
+                    <!-- #endregion -->
+                    <!-- #region Datos Generales-->
+                    <div class="row datos my-2 py-2 d-flex justify-content-center">
+                        <h4 class="text-center text-decoration-underline">Datos Generales</h4>
+                        <div class="col-4 my-1 d-flex flex-column">
+                            <label for="" class="form-label">Ciclo lectivo</label>
+                            <input type="number" class="form-control" placeholder="Ej: 2018" name="cicloLectivo"
+                                id="inputCiclo">
+                        </div>
+                        <div class="col-2 d-flex my-1 justify-content-center flex-column">
+                            <label for="" class="form-label">Curso</label>
+                            <input type="text" class="form-control" placeholder="Ej:1° Año" name="curso"
+                                id="inputCurso">
+                        </div>
+                        <div class="col-4 d-flex flex-column mt-3 justify-content-center align-items-center">
+                            <div class="form-check form-switch">
+                                <label for="inputReg" class="form-check-label fs-6">la materia se puede promocionar</label>
+                                <input type="checkbox" class="form-check-input h6" placeholder="Ej:" name="" id="inputReg">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Botones-->
+                    <div class="row justify-content-center py-3 barraBotones">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+
+                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+                </form>                
+            </div>
+        </div>
+        <!-- #endregion -->
+    </main>
+
+    <!-- #region Toast-->
+    <!--Toast Success-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+            <strong class="me-auto">!Lo conseguimos!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+            los datos se guardaron correctamente.
+        </div>
+    </div>
+    <!--Toast Error-->
+    <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastError">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <!-- #endregion -->
+    <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
+    <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
+    <script src="../Nueva carpeta/Css-Js/footer.js"></script>
+    <script src="../Nueva carpeta/Css-Js/MateriaCarrera_Editar.js"></script>
+    
+</body>
+
+</html>

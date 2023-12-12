@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/BarraNavegacion.css">
     <link rel="stylesheet" href="../Nueva carpeta/Css-Js/InscripcionesV2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
     <title>Nueva Inscripcion</title>
 </head>
 
@@ -61,6 +61,9 @@
         <div class="row contenedor justify-content-center">
             <div class="col-12">
                 <form action="" method="post" class="formulario text-muted " id="formulario">
+                    <div class="alert alert-danger d-none" id="mensajeError" role="alert">
+                        Por favor, completa todos los campos de Carrera, Alumno, importe y Estado de importe
+                    </div>
                     <!-- #region Seleccion de alumno y Carrera-->
                     <div class="row my-2 py-2 datos d-flex justify-content-center align-items-center">
                         <h4 class="text-muted text-decoration-underline text-center"> Selección de Alumno y de Carrera
@@ -136,7 +139,7 @@
                     </div>
                     <!-- #endregion -->
                     <!-- #region Documentacion-->
-                    <div class="row my-3 py-2 datos  justify-content-between">
+                    <div class="row my-3 py-2 datos  justify-content-center">
                         <h4 class="text-muted text-center text-decoration-underline">Documentación</h4>
                         <div class="col-6 checkbox">
                             <div class="form-check form-switch mb-3">
@@ -161,14 +164,34 @@
                         </div>
                     </div>
                     <!-- #endregion -->
-                    <!-- #region Botones-->
-                    <div class="row justify-content-center py-3 barraBotones">
-                        <div class="col-6 d-flex justify-content-center align-items-center">
-                            <button type="button" class="btn btnGuardar mx-3">Guardar</button>
-                            <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
+                    <!-- #region Estsdo de Cooperadora-->
+                    <div class="row my-3 py-2 datos  justify-content-center">
+                        <h4 class="text-muted text-center text-decoration-underline">Importe de Cooperadora Anual</h4>
+                        <div class="col-auto my-1 d-flex">
+                            <label for="coopImporte" class="form-label mx-3">Importe</label>
+                            <input type="number" class="form-control" id="CoopImporte">
+                        </div>
+                        <div class="col-4 my-1">
+                            <div class="input-group">
+                                <label class="input-group-text" for="CoopEstado">Estado</label>
+                                <select class="form-select" id="CoopEstado">
+                                    <option selected>Selecciona un Estado</option>
+                                    <option value="pagado">Pagado</option>
+                                    <option value="deuda">Con Deuda</option>
+                                </select>
+                            </div>
+
                         </div>
                     </div>
-                    <!-- #endregion -->
+                        <!-- #endregion -->
+                        <!-- #region Botones-->
+                        <div class="row justify-content-center py-3 barraBotones">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <button type="submit" class="btn btnGuardar mx-3">Guardar</button>
+                                <button type="button" class="btn btnCancelar mx-3">Cancelar</button>
+                            </div>
+                        </div>
+                        <!-- #endregion -->
                 </form>
                 <!-- #region Modal Mostrar/Editar Sede/Carrera-->
                 <div class="modal fade" id="modalCarrera" data-bs-keyboard="false" tabindex="-1"
@@ -250,13 +273,15 @@
                                             <div class="col-6">
                                                 <!-- fecha nacimiento -->
                                                 <label for="Fnacimiento" class="form-label">Fecha de Nacimiento</label>
-                                                <input type="date" class="form-control" name="Fnacimiento" id="Fnacimiento" disabled>
+                                                <input type="date" class="form-control" name="Fnacimiento"
+                                                    id="Fnacimiento" disabled>
                                             </div>
                                         </div>
                                         <div class="col-auto">
                                             <!-- telefono -->
                                             <label for="telefono" class="form-label">telefono</label>
-                                            <input type="number" class="form-control" name="telefono" id="telefono" disabled>
+                                            <input type="number" class="form-control" name="telefono" id="telefono"
+                                                disabled>
 
                                             <label for="correo" class="form-label">Correo</label>
                                             <input type="email" class="form-control" name="correo" id="correo" disabled>
@@ -267,7 +292,8 @@
                                     <h6 class="text-center text-muted">Direccion</h6>
                                     <div class="col-6">
                                         <label for="localidad" class="form-label">localidad</label>
-                                        <input type="text" class="form-control" name="localidad" id="localidad" disabled>
+                                        <input type="text" class="form-control" name="localidad" id="localidad"
+                                            disabled>
                                     </div>
                                     <div class="col-6">
                                         <label for="barrio" class="form-label">barrio</label>
@@ -275,7 +301,8 @@
                                     </div>
                                     <div class="col-9">
                                         <label for="direccion" class="form-label">direccion</label>
-                                        <input type="text" class="form-control" name="direccion" id="direccion" disabled>
+                                        <input type="text" class="form-control" name="direccion" id="direccion"
+                                            disabled>
                                     </div>
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-6">
@@ -283,7 +310,7 @@
                                             <input type="number" class="form-control" name="piso" id="piso" disabled>
                                         </div>
                                         <div class="col-6">
-                                            
+
                                             <label for="depto" class="form-label">depto</label>
                                             <input type="text" class="form-control" name="depto" id="depto" disabled>
                                         </div>
@@ -292,20 +319,21 @@
                                 <div class="row d-flex justify-content-center mt-3">
                                     <h6 class="text-center text-muted">Contacto de Emergencia</h6>
                                     <div class="col-6">
-                                        
+
                                         <label for="contEmergencia" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" name="contEmergencia" id="contEmergencia" disabled>
+                                        <input type="text" class="form-control" name="contEmergencia"
+                                            id="contEmergencia" disabled>
                                     </div>
                                     <div class="col-6">
-                                        
+
                                         <label for="telEmergencia" class="form-label">Teléfono</label>
-                                        <input type="text" class="form-control" name="telEmergencia" id="telEmergencia" disabled>
+                                        <input type="text" class="form-control" name="telEmergencia" id="telEmergencia"
+                                            disabled>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success" name="editarAlumno"
-                                    id="editarAlumno">
+                                <button type="button" class="btn btn-success" name="editarAlumno" id="editarAlumno">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-pencil-square" viewBox="0 0 16 16">
                                         <path
@@ -326,6 +354,32 @@
             </div>
         </div>
     </main>
+    <!-- #region ToastExito-->
+    <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+          <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+          <strong class="me-auto">!Lo conseguimos!</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          los datos se guardaron correctamente.
+        </div>
+     </div>
+     <!-- #endregion -->
+
+     <!-- #region ToastError-->
+     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="errorToast">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <!-- #endregion -->
+
     <!-- #region Footer-->
     <div class="container">
         <footer class="footer mt-5 mb-3 " id="footer"></footer>
@@ -335,6 +389,7 @@
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/Inscripciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
 
 </html>

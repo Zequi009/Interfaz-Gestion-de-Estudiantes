@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <title>Cooperadora</title>
+        <link rel="stylesheet" href="../Nueva carpeta/Css-Js/toast.css">
+    <title>Cooperadora Primera vez</title>
 </head>
 
 <body>
@@ -56,35 +57,37 @@
     <main class="container">
         <div class="row contenedor justify-content-center">
             <div class="col-12">
-
                 <!-- #region formulario-->
                 <form action="" method="post" class="formulario text-muted" id="formulario">
+                    
+                    <!-- #region Mensaje de Error-->
+                    <div class="alert alert-danger d-none" id="mensajeError" role="alert">
+                        Por favor, completa todos los campos, antes de enviar los datos
+                    </div>
+                    <!-- #endregion -->
                     <div class="row my-3 py-2 datos d-flex justify-content-center">
                         <h4 class="text-muted text-decoration-underline text-center">Nuevo pago</h4>
-
-                        <!-- #region selectInscripciones-->
-                        <div class="row-auto d-flex justify-content-center">
-                            <div class="col-4 mt-4">
-                                <select name="selectInscripciones" id="selectInscripciones"
-                                    class="form-select"></select>
+                        <div class="row-auto d-flex justify-content-center mt-3">
+                            <div class="col-auto">
+                                <label for="" class="form-label h5"> importe de cuota:$<B id="spanSaldo" class=" text-success"></B></label>
                             </div>
                         </div>
-                        <!-- #endregion -->
                         <!-- #region Fecha, Monto y Saldo-->
-                        <div class="row-auto d-flex justify-content-center">
+                        <div class="row-auto d-flex justify-content-center mt-1">
                             <!-- #region inputFecha-->
-                            <div class="col-4 d-flex flex-column mx-2">
+                            <div class="col-4 d-flex flex-column mx-3 my-3">
                                 <label for="inputFecha" class="form-label">Fecha del Pago</label>
                                 <input type="date" class="form-control w-75 pl-3" name="inputFecha" id="inputFecha">
                             </div>
-                            <!-- #endregion -->
+                            
                             <!-- #region inputMonto / Span Saldo-->
-                            <div class="col-4 my-4 mx-2">
+                            <div class="col-auto my-3 mx-2 ">
+                                <label for="spanSaldo" class="form-label"> importe de cuota</label>
                                 <div class="input-group">
                                     
-                                    <input type="numer" class="form-control" placeholder="ingrese un monto"
+                                    <input type="number" class="form-control" placeholder="ingrese un monto"
                                         name="inputMonto" id="inputMonto">
-                                    <span class="input-group-text" id="spanSaldo"></span>
+                                    <span class="input-group-text">$</span>
                                 </div>
                             </div>
                             <!-- #endregion -->
@@ -101,63 +104,46 @@
                     <!-- #endregion -->
                 </form>
                 <!-- #endregion -->
-                <!-- #region cuadro de busqueda-->
-                <div class="row my-2 py-2 datos d-flex justify-content-center">
-                    <h4 class="text-muted text-decoration-underline text-center">Búsqueda</h4>
-                    <!--Buscar por Carrera-->
-                    <div class="col-6 d-flex">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="buscar">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary btnBuscar"> Buscar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- #endregion -->
+
             </div>
         </div>
-        <!-- #region Tabla de Datos-->
-        <div class="row contenedor justify-content-center ">
-            <div class="col table-responsive my-3"style="max-height: 400px;">
-                <table class="table table-striped datos">
-                    <!--Encabezado-->
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <!--1-->
-                            <th scope="col">id</th>
-                            <!--2-->
-                            <th scope="col">Dni</th>
-                            <!--3-->
-                            <th scope="col">Nombre</th>
-                            <!--4-->
-                            <th scope="col">Fecha</th>
-                            <!--5-->
-                            <th scope="col">ultimo monto</th>
-                            <!--6-->
-                            <th scope="col">Saldo actual</th>
-                            <!--7-->
-                            <th scope="col">Estado</th>
-                            <!--8-->
-                            <th scope="col">Eliminar</th>
-                        </tr>
-                    </thead>
-                    <!--Columnas-->
-                    <tbody id="tabla-pagos"></tbody>
-                </table></div>
-        </div>
-        <!-- #endregion -->
-    </main>
+        </main>
     <!--Footer-->
     <div class="container">
         <footer class="footer mt-5 mb-3 " id="footer"></footer>
     </div>
+     <!-- #region ToastExito-->
+     <div class="toast T-success my-1" role="alert" aria-live="assertive" aria-atomic="true" id="toastSuccess">
+        <div class="toast-header border-botomm border-light text-dark">
+          <img src="../Nueva carpeta/Imagenes/Flork-Success.png" class="rounded me-2" alt="Flork-Success">
+          <strong class="me-auto">!Lo conseguimos!</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          los datos se guardaron correctamente.
+        </div>
+     </div>
+     <!-- #endregion -->
+
+     <!-- #region ToastError-->
+     <div class="toast T-Error my-1" role="alert" aria-live="assertive" aria-atomic="true" id="errorToast">
+        <div class="toast-header border-botomm border-light text-dark">
+            <img src="../Nueva carpeta/Imagenes/Flork-Error.png" class="rounded me-2" alt="Flork-Error">
+            <strong class="me-auto">¡Oh No!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error al Guardar los Datos
+        </div>
+    </div>
+    <!-- #endregion -->
 
     <script src="../Nueva carpeta/Css-Js/bootstrap.bundle.min.js"></script>
     <script src="../Nueva carpeta/Css-Js/barradeNavegacion.js"></script>
     <script src="../Nueva carpeta/Css-Js/footer.js"></script>
-    <script src="../Nueva carpeta/Css-Js/Cooperadora_editar.js"></script>
+    <script src="../Nueva carpeta/Css-Js/Cooperadorav1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    
 </body>
 
 </html>

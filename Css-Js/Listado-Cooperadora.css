@@ -9,7 +9,6 @@
     background: #3890ca;
     color: #f2f2f2;
     height: 50px;
-<<<<<<< HEAD
     width: 150px;
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
@@ -21,16 +20,36 @@
     transform: translate(-1px ,-1px);
     border-radius: 10px;
 
-=======
-    width: 80px;
-    font-size: 13px;
+}
+
+.contenedor .formulario .barraBotones .btnGuardar{
+    background: #3890ca;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
     border-radius: 10px;
     font-family: 'Open Sans', sans-serif;
 }
-.contenedor .datos .btnBuscar:hover{
+.contenedor .formulario .barraBotones .btnGuardar:hover{
     background: #44aadd;
     box-shadow: 3px 5px 10px #332f2c;
-    transform: translate(-5px ,-6px);
+    transform: translate(-1px ,-1px);
     border-radius: 10px;
->>>>>>> 87c926f1ea20df60d73c1fbbe5aab55a9dc33449
+}
+
+.contenedor .barraBotones .btnCancelar{
+    background: #ca3838;
+    color: #f2f2f2;
+    height: 60px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .barraBotones .btnCancelar:hover{
+    background: #dd2525;
+    box-shadow: 3px 5px 10px #332f2c;
+    transform: translate(-1px ,-1px);
+    border-radius: 10px;
 }
